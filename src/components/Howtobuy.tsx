@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import styles from "./Howtobuy.module.css";
 
 export type HowtobuyType = {
@@ -6,9 +6,16 @@ export type HowtobuyType = {
 };
 
 const Howtobuy: FunctionComponent<HowtobuyType> = ({ className = "" }) => {
+
+  const [windowDim,setWindowDim]=useState({width:0,height:0})
+
+  useEffect(()=>{
+    setWindowDim({width:window.innerWidth,height:window.innerHeight})
+  },[])
+
   return (
-    <section className={[styles.howtobuy, className].join(" ")} data-scroll-to="HowToBuy">
-      <div className={styles.howToBuy}>
+    <section style={{width:"100%",height:windowDim.height*0.75+"px"}} className={[styles.howtobuy, className].join(" ")} data-scroll-to="HowToBuy">
+      <div style={{width:windowDim.width*0.85,height:"100%",display:"flex",flexDirection:"column",alignItems:'center',justifyContent:'center'}} className={styles.howToBuy}>
         <div className={styles.howToBuy1}>HOW TO BUY</div>
         <div className={styles.buyingSteps}>
           <div className={styles.downloadPhantomExtension}>

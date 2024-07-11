@@ -15,7 +15,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
     console.log("height",window.innerHeight)
     setWindowDim({width:window.innerWidth,height:window.innerHeight})
 
-    window.addEventListener("resize",(e)=>console.log("new dim",window.innerHeight))
+    window.addEventListener("resize",(e)=>console.log("new dim",window.innerHeight,window.outerHeight))
   },[])
 
   return (

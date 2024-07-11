@@ -1,4 +1,4 @@
-import { FunctionComponent, useRef } from "react";
+import { FunctionComponent, useEffect, useRef, useState } from "react";
 import styles from "./Gallery.module.css";
 
 export type GalleryType = {
@@ -6,7 +6,14 @@ export type GalleryType = {
 };
 
 const Gallery: FunctionComponent<GalleryType> = ({ className = "" }) => {
+
   const containerRef = useRef<HTMLDivElement>(null);
+  const [windowDim,setWindowDim]=useState({width:0,height:0})
+  const [images,setImages]=useState(["/marv-and-pep-costumes0008@2x.png","/untitled20001-1-1@2x.png","/marv-web-new-set0009@2x.png","/marv-mems0011@2x.png","/road-map0008@2x.png","/marv-mems0013@2x.png","/marv-and-pep-costumes0009@2x.png","/marv-mems0015@2x.png"])
+  const itemsPerRow=useRef(4).current
+  const rows={complete:Math.floor(images.length/itemsPerRow),partial:images.length%itemsPerRow}
+  console.log("rows",rows)
+  //const [pageDim,setPageDim]=useState({width:0,height:0})
 
   const scrollLeft = () => {
     if (containerRef.current) {
@@ -20,12 +27,81 @@ const Gallery: FunctionComponent<GalleryType> = ({ className = "" }) => {
     }
   };
 
+  useEffect(()=>{
+    window.addEventListener("resize",(e)=>{
+      //setPageDim({width:window.innerWidth,height:window.innerHeight})
+    })
+    //setPageDim({width:window.innerWidth,height:window.innerHeight})
+    setWindowDim({width:window.innerWidth,height:window.innerHeight})
+  },[])
+
+  //
+
   return (
     <section
       className={[styles.gallery, className].join(" ")}
       data-scroll-to="Gallery"
-    >
-      <div className={styles.gallery1}>
+      style={{width:"100%",height:windowDim.height+"px"}}
+      >
+        <div style={{width:windowDim.width,height:"100%",padding:"50px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+          <div style={{height:windowDim.height*0.25,display:"flex",flexDirection:"row"}}>
+            <div style={{flex:1}}>
+              <img
+              style={{height:"100%",width:"auto"}}
+              loading="lazy"
+              alt=""
+              src="/road-map00010007-1@2x.png"
+            /></div>
+            <div style={{display:"flex",flexDirection:"column",justifyContent:"flex-end"}}><h1>MARVGALLERY</h1></div>
+            <div style={{flex:1}}>
+              <img
+              style={{height:"100%",width:"auto"}}
+              loading="lazy"
+              alt=""
+              src="/road-map00010008-1@2x.png"
+            /></div>
+          </div>
+          <div style={{height:windowDim.height*0.6,width:"85%",display:"flex",flexDirection:"column",gap:"40px"}}>
+            {
+              new Array(rows.complete).fill("").map((item,i)=>
+              <div style={{display:"flex",flex:1,flexDirection:"row",gap:"40px"}}>
+                {
+                  new Array(4).fill("").map((item2,j)=>
+                  <div style={{flex:1,display:'flex',position:"relative"}}>
+                    <div style={{flex:1,width:"100%",height:"100%",left:"15px",top:"15px",borderRadius:"10px",position:"absolute",backgroundColor:"#5D8F35"}}></div>
+                    <div style={{flex:1,display:"flex",backgroundColor:"white",zIndex:1,width:"100%",height:"100%",borderRadius:"10px",justifyContent:"center",alignItems:"center"}}>
+                      <img
+                        style={{width:"60%",height:"auto"}}
+                        // className={styles.marvAndPepCostumes0008}
+                        loading="lazy"
+                        alt=""
+                        src={images[(i*4)+j]}
+                        />
+                    </div>
+                  </div>
+                  )
+                }
+              </div>
+              ) 
+            }
+          </div>
+          <div style={{height:windowDim.height*0.15,gap:"5px",display:"flex",justifyContent:"center",alignItems:"center",alignSelf:"flex-end",transform:"translateX(-100%)"}}>
+            <img
+              className={styles.notoupArrowIcon}
+              alt="Scroll Left"
+              src="/noto_up-arrow.png"
+              onClick={scrollLeft}
+            />
+            <img
+              className={styles.notoupArrowIcon1}
+              alt="Scroll Right"
+              src="/notouparrow-1@2x.png"
+              onClick={scrollRight}
+            />
+          </div>
+        </div>
+
+      {/* <div className={styles.gallery1}>
         <div className={styles.marvgallery}>MARVGALLERY</div>
         <div className={styles.imageGrid}>
           <div ref={containerRef} className={styles.gridContent}>
@@ -252,7 +328,7 @@ const Gallery: FunctionComponent<GalleryType> = ({ className = "" }) => {
             alt=""
             src="/road-map00010007-1@2x.png"
           />
-        </div>
+        </div> 
         <div className={styles.galleryTitles1}>
           <img
             className={styles.roadMap000100081}
@@ -275,9 +351,17 @@ const Gallery: FunctionComponent<GalleryType> = ({ className = "" }) => {
           src="/notouparrow-1@2x.png"
           onClick={scrollRight}
         />
-      </div>
+      </div> */}
     </section>
   );
 };
+
+const Imagecontainer=()=>{
+
+
+  return(
+    <div></div>
+  )
+}
 
 export default Gallery;

@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import styles from "./AboutUs.module.css";
-// import aboutusBg from '../../public/aboutusBg.png'
+//import aboutusBg from '../../public/aboutusBg.png'
 
 export type AboutUsType = {
   className?: string;
@@ -9,18 +9,19 @@ export type AboutUsType = {
 const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
 
   const [windowDim,setWindowDim]=useState({width:0,height:0})
-  const [pageDim,setPageDim]=useState({width:0,height:0})
+  //const [pageDim,setPageDim]=useState({width:0,height:0})
 
   useEffect(()=>{
     window.addEventListener("resize",(e)=>{
-      setPageDim({width:window.innerWidth,height:window.innerHeight})
+      console.log("dim",window.innerWidth,window.outerWidth);
+      //setPageDim({width:window.innerWidth,height:window.innerHeight})
     })
-    setPageDim({width:window.innerWidth,height:window.innerHeight})
+    //setPageDim({width:window.innerWidth,height:window.innerHeight})
     setWindowDim({width:window.innerWidth,height:window.innerHeight*0.75})
   },[])
 
   return (
-    <section style={{width:"100%",height:windowDim.height+"px",backgroundPositionY:"bottom",backgroundRepeat:"no-repeat",backgroundSize:pageDim.width+"px",backgroundImage:"url(/aboutusBg.png)"}} className={[styles.aboutUs, className].join(" ")}  data-scroll-to="About">
+    <section style={{width:"100%",height:windowDim.height+"px",backgroundPositionY:"bottom",backgroundRepeat:"no-repeat",backgroundSize:"100%",backgroundImage:"url(/aboutusBg.png)"}} className={[styles.aboutUs, className].join(" ")}  data-scroll-to="About">
       <div style={{width:0.4*windowDim.width+"px"}}>
       <div style={{display:"flex",flexDirection:"row"}}>
         <div style={{width:"50%",display:"flex",alignItems:"flex-end",justifyContent:"center",transform:"translate(-50%,0)"}}>
