@@ -11,6 +11,8 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
 
   useEffect(()=>{
     setWindowDim({width:window.innerWidth,height:window.innerHeight})
+
+    window.addEventListener("resize",()=>console.log("resized"))
   },[])
 
   return (

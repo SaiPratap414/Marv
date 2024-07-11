@@ -21,45 +21,47 @@ const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
   },[])
 
   return (
-    <section style={{width:"100%",height:windowDim.height+"px",backgroundPositionY:"bottom",backgroundRepeat:"no-repeat",backgroundSize:"100%",backgroundImage:"url(/aboutusBg.png)"}} className={[styles.aboutUs, className].join(" ")}  data-scroll-to="About">
-      <div style={{width:0.4*windowDim.width+"px"}}>
-      <div style={{display:"flex",flexDirection:"row"}}>
-        <div style={{width:"50%",display:"flex",alignItems:"flex-end",justifyContent:"center",transform:"translate(-50%,0)"}}>
-          <img
-            className={styles.crowmAnimationIcon}
-            loading="lazy"
-            alt=""
-            src="/c.gif"
-          />
-        </div>
-        <div style={{width:"50%"}}>
-          <img
-            className={styles.marv0005Icon}
-            loading="lazy"
-            alt=""
-            src="/marv0005@2x.png"
-          />
-        </div>
+    <section  style={{width:"100%",height:"100vh",maxHeight:"700px",minHeight:"650px",backgroundPositionY:"bottom",backgroundRepeat:"no-repeat",backgroundSize:"100%",backgroundImage:"url(/aboutusBg.png)"}} className={[styles.aboutUs, className].join(" ")}  data-scroll-to="About">
+      <div style={{width:"100%",height:"100%",maxWidth:"1440px",display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",gap:"5%"}}>
+        <div style={{width:"40%"}}>
+          <div style={{display:"flex",flexDirection:"row"}}>
+            <div style={{width:"50%",display:"flex",alignItems:"flex-end",justifyContent:"center",transform:"translate(-50%,0)"}}>
+              <img
+                className={styles.crowmAnimationIcon}
+                loading="lazy"
+                alt=""
+                src="/c.gif"
+              />
+            </div>
+            <div style={{width:"50%"}}>
+              <img
+                className={styles.marv0005Icon}
+                loading="lazy"
+                alt=""
+                src="/marv0005@2x.png"
+              />
+            </div>
+          </div>
+          <div><text className={styles.aNewKing}>A New King Has Risen</text></div>
       </div>
-      <div><text className={styles.aNewKing}>A New King Has Risen</text></div>
-    </div>
-    <div style={{width:0.6*windowDim.width+"px"}}>
-      <p style={{fontFamily:"var(--font-patrick-hand)",fontSize:"0.3em",color:"#E8AC25",textAlign:"start"}}>
-        Marv, a frog with a distinct personality, stands out in the Solana
-        ecosystem. He’s slightly racist, a trait that sometimes leads to
-        awkward social interactions. His shyness makes him a reserved
-        figure, often observing more than participating. However, Marv's
-        love for dressing up adds a flair to his character, making him a
-        stylish and memorable ruler.
-      </p>
-      <p style={{fontFamily:"var(--font-patrick-hand)",fontSize:"0.3em",color:"white",textAlign:"start"}}>
-        Despite his quirks, Marv has risen to prominence in Solana,
-        where he rules with a gentle touch and a keen sense of
-        fashion. His approach to leadership combines his shy nature
-        with an undeniable charisma, creating a balance that resonates
-        with his community.
-      </p>
-    </div>
+      <div style={{width:"55%"}}>
+        <p style={{fontFamily:"var(--font-patrick-hand)",fontSize:"0.3em",color:"#E8AC25",textAlign:"start"}}>
+          Marv, a frog with a distinct personality, stands out in the Solana
+          ecosystem. He’s slightly racist, a trait that sometimes leads to
+          awkward social interactions. His shyness makes him a reserved
+          figure, often observing more than participating. However, Marv's
+          love for dressing up adds a flair to his character, making him a
+          stylish and memorable ruler.
+        </p>
+        <p style={{fontFamily:"var(--font-patrick-hand)",fontSize:"0.3em",color:"white",textAlign:"start"}}>
+          Despite his quirks, Marv has risen to prominence in Solana,
+          where he rules with a gentle touch and a keen sense of
+          fashion. His approach to leadership combines his shy nature
+          with an undeniable charisma, creating a balance that resonates
+          with his community.
+        </p>
+      </div>
+      </div>
     </section>
   );
 };

@@ -1,10 +1,10 @@
 .marvWebRemovedBg00011 {
-  height: 481px;
+  /* height: 481px; */
   flex: 1;
   position: relative;
   max-width: 100%;
   overflow: hidden;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .heroContent {
   width: 481px;
