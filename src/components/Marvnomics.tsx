@@ -19,10 +19,10 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
 
   return (
     <section style={{width:"100%",height:windowDim.height+"px",justifyContent:"center",alignItems:"center"}} className={[styles.marvnomics, className].join(" ")} data-scroll-to="Marvnomics">
-      <div style={{width:windowDim.width*0.85,height:"100%",padding:"75px",gap:"50px",display:"flex",flexDirection:"column"}}>
+      <div style={{width:windowDim.width*0.9,height:"100%",padding:"75px",gap:"50px",display:"flex",flexDirection:"column"}}>
         <div style={{height:"30%",width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"15px"}}>
           <div className={styles.marvnomics1}>MARVNOMICS</div>
-          <div style={{maxWidth:"50%",alignSelf:"center"}} className={styles.marvsJourneyIn}>
+          <div style={{maxWidth:"75%",alignSelf:"center"}} className={styles.marvsJourneyIn}>
             Marv's journey in the Solana world is a testament to his unique
             approach to leadership. He continues to engage with his community,
             embracing their support and feedback. His dedication to
