@@ -10,16 +10,9 @@ export type MarvnomicsType = {
 
 const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
 
-  const [windowDim,setWindowDim]=useState({width:0,height:0})
-
-  useEffect(()=>{
-    setWindowDim({width:window.innerWidth,height:window.innerHeight})
-  },[])
-
-
   return (
-    <section style={{width:"100%",height:windowDim.height+"px",justifyContent:"center",alignItems:"center"}} className={[styles.marvnomics, className].join(" ")} data-scroll-to="Marvnomics">
-      <div style={{width:windowDim.width*0.9,height:"100%",padding:"75px",gap:"50px",display:"flex",flexDirection:"column"}}>
+    <section style={{width:"100%",height:"100vh",maxHeight:"700px",minHeight:"650px",display:"flex",gap:"10%",flexDirection:"column",justifyContent:"center",alignItems:"center",padding:"20px"}} className={[styles.marvnomics, className].join(" ")} data-scroll-to="Marvnomics">
+      <div style={{width:"100%",maxWidth:"1440px",height:"100%",padding:"75px",gap:"30px",display:"flex",flexDirection:"column"}}>
         <div style={{height:"30%",width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"15px"}}>
           <div className={styles.marvnomics1}>MARVNOMICS</div>
           <div style={{maxWidth:"75%",alignSelf:"center"}} className={styles.marvsJourneyIn}>
@@ -31,7 +24,7 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
             inclusive ecosystem.
           </div>
         </div>
-        <div style={{height:"70%",width:"100%",display:"flex",flexDirection:"row"}}>
+        <div style={{height:"65%",width:"100%",display:"flex",flexDirection:"row"}}>
           <div style={{width:'50%',height:"100%",display:"flex",flexDirection:"column",gap:"40px"}}>
             <div style={{width:'100%',height:"50%",display:"flex",flexDirection:"row",gap:"40px"}}>
               <Framecontainer image={"/marv-web-new-set0005@2x.png"}></Framecontainer>
@@ -44,7 +37,7 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
           </div>
           <div style={{width:'50%',height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}> 
             <img
-            style={{width:"75%",height:"auto"}}
+            style={{width:"70%",height:"auto"}}
             loading="lazy"
             alt=""
             src="/marv-mems0001-1@2x.png"

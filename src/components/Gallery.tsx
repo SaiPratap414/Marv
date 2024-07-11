@@ -41,10 +41,10 @@ const Gallery: FunctionComponent<GalleryType> = ({ className = "" }) => {
     <section
       className={[styles.gallery, className].join(" ")}
       data-scroll-to="Gallery"
-      style={{width:"100%",height:windowDim.height+"px"}}
+      style={{width:"100%",height:"100vh",maxHeight:"700px",minHeight:"650px",display:"flex",gap:"10%",flexDirection:"column",justifyContent:"center",alignItems:"center"}}
       >
-        <div style={{width:windowDim.width,height:"100%",padding:"50px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-          <div style={{height:windowDim.height*0.25,display:"flex",flexDirection:"row"}}>
+        <div style={{width:"100%",height:"100%",maxWidth:"1440px",padding:"50px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+          <div style={{height:"25%",display:"flex",flexDirection:"row"}}>
             <div style={{flex:1}}>
               <img
               style={{height:"100%",width:"auto"}}
@@ -52,7 +52,7 @@ const Gallery: FunctionComponent<GalleryType> = ({ className = "" }) => {
               alt=""
               src="/road-map00010007-1@2x.png"
             /></div>
-            <div style={{display:"flex",flexDirection:"column",justifyContent:"flex-end"}}><h1>MARVGALLERY</h1></div>
+            <div style={{display:"flex",flexDirection:"column",justifyContent:"flex-end"}}><h1 style={{margin:"20px"}}>MARVGALLERY</h1></div>
             <div style={{flex:1}}>
               <img
               style={{height:"100%",width:"auto"}}
@@ -61,7 +61,7 @@ const Gallery: FunctionComponent<GalleryType> = ({ className = "" }) => {
               src="/road-map00010008-1@2x.png"
             /></div>
           </div>
-          <div style={{height:windowDim.height*0.6,width:"85%",display:"flex",flexDirection:"column",gap:"40px"}}>
+          <div style={{height:"60%",width:"85%",display:"flex",flexDirection:"column",gap:"40px"}}>
             {
               new Array(rows.complete).fill("").map((item,i)=>
               <div style={{display:"flex",flex:1,flexDirection:"row",gap:"40px"}}>
@@ -85,7 +85,7 @@ const Gallery: FunctionComponent<GalleryType> = ({ className = "" }) => {
               ) 
             }
           </div>
-          <div style={{height:windowDim.height*0.15,gap:"5px",display:"flex",justifyContent:"center",alignItems:"center",alignSelf:"flex-end",transform:"translateX(-100%)"}}>
+          <div style={{height:"15%",gap:"5px",display:"flex",justifyContent:"center",alignItems:"center",alignSelf:"flex-end",transform:"translateX(-100%)"}}>
             <img
               className={styles.notoupArrowIcon}
               alt="Scroll Left"

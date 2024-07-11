@@ -14,8 +14,8 @@ const Howtobuy: FunctionComponent<HowtobuyType> = ({ className = "" }) => {
   },[])
 
   return (
-    <section style={{width:"100%",height:windowDim.height*0.75+"px"}} className={[styles.howtobuy, className].join(" ")} data-scroll-to="HowToBuy">
-      <div style={{width:windowDim.width*0.9,height:"100%",display:"flex",flexDirection:"column",alignItems:'center',justifyContent:'center'}} className={styles.howToBuy}>
+    <section style={{width:"100%",height:"100vh",maxHeight:"700px",minHeight:"650px",display:"flex",gap:"10%"}} className={[styles.howtobuy, className].join(" ")} data-scroll-to="HowToBuy">
+      <div style={{width:"100%",maxWidth:"1440px",height:"100%",display:"flex",flexDirection:"column",alignItems:'center',justifyContent:'center'}} className={styles.howToBuy}>
         <div className={styles.howToBuy1}>HOW TO BUY</div>
         <div className={styles.buyingSteps}>
           <div className={styles.downloadPhantomExtension}>

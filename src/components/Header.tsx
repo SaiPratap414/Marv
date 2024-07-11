@@ -10,13 +10,8 @@ export type HeaderType = {
 
 const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
 
-  const [windowDim,setWindowDim]=useState({width:0,height:0});
-
   useEffect(()=>{
-    console.log("dimmmm",screen.width,screen.height,window.innerHeight)
-    setWindowDim({width:window.innerWidth,height:window.innerHeight})
 
-    window.addEventListener("resize",(e)=>console.log("new dim",screen.width,window.innerWidth))
   },[])
 
   return (

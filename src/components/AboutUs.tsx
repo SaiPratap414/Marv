@@ -8,16 +8,8 @@ export type AboutUsType = {
 
 const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
 
-  const [windowDim,setWindowDim]=useState({width:0,height:0})
-  //const [pageDim,setPageDim]=useState({width:0,height:0})
-
   useEffect(()=>{
-    window.addEventListener("resize",(e)=>{
-      console.log("dim",window.innerWidth,window.outerWidth);
-      //setPageDim({width:window.innerWidth,height:window.innerHeight})
-    })
-    //setPageDim({width:window.innerWidth,height:window.innerHeight})
-    setWindowDim({width:window.innerWidth,height:window.innerHeight*0.75})
+
   },[])
 
   return (

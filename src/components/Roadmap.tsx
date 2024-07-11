@@ -16,8 +16,8 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
   },[])
 
   return (
-    <section style={{width:"100%",height:2*windowDim.height+"px",justifyContent:"center",alignItems:"center"}} className={[styles.roadmap, className].join(" ")} data-scroll-to="Roadmap">
-      <div style={{width:windowDim.width*0.9,height:"100%",padding:"50px"}}>
+    <section style={{width:"100%",height:"200vh",maxHeight:"1400px",minHeight:"1300px",display:"flex",gap:"10%",padding:"20px",flexDirection:"column",justifyContent:"center",alignItems:"center"}} className={[styles.roadmap, className].join(" ")} data-scroll-to="Roadmap">
+      <div style={{width:"100%",height:"100%",maxWidth:"1440px",padding:"50px"}}>
         <div style={{width:"100%",height:"5%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}><h1 style={{textAlign:"center",margin:"10px"}}>ROADMAPP</h1></div>
         <div style={{height:"95%",width:"100%",display:"flex",flexDirection:"column"}}>
           <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
