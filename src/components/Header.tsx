@@ -15,7 +15,8 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
   },[])
 
   return (
-    <section style={{width:"100%",height:"100vh",maxHeight:"700px",minHeight:"650px",display:"flex",gap:"10%",flexDirection:"column",justifyContent:"center",alignItems:"center"}} className={[styles.header, className].join(" ")} id="header">
+    <section style={{width:"100%",height:"100vh",display:"flex",gap:"10%",flexDirection:"column",justifyContent:"center",alignItems:"center"}} className={[styles.header, className].join(" ")} id="header">
+      <div></div>
       <div style={{height:"15%",width:"100%"}}><FrameComponent4 /></div>
       <div style={{height:"75%",width:"100%",display:"flex",flexDirection:"row",maxWidth:"1440px"}}>
         <div style={{width:"40%",height:"100%"}}>
