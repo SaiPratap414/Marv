@@ -1,3 +1,133 @@
+.mainwrapper{
+  width:100vw;
+  height:100vh;
+  background-image: linear-gradient(#0252B2,#561D6C);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subwrapper{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 10px 20px; */
+  position: relative;
+}
+
+.title{
+  font-family: var(--font-pure-joy);
+  color: white;
+  text-shadow:0px 10px black;
+  z-index: 1;
+}
+
+.body{
+  display: flex;
+}
+
+.frametitle{
+  text-align: center;
+  font-family: var(--font-bangers);
+  margin: 5px;
+}
+
+.framesubtitle{
+  text-align: center;
+  font-family: var(--font-patrick-hand-SC);
+  margin: 0;
+}
+
+.frameswrapper{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+}
+
+.frame{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  align-self: center;
+  border-radius: 20px;
+  color: white;
+}
+
+@media screen and (max-width:700px) {
+  .title{
+    font-size: 60px;
+    height: 15%;
+  }
+
+  .mainwrapper{
+    max-height: 800px;
+    min-height: 700px;
+    min-width: 360px;
+  }
+
+  .subwrapper{
+    min-width: 360px;
+  }
+
+  .body{
+    flex-direction: column;
+    gap: 20px;
+    height: 85%;
+  }
+
+  .frameswrapper{
+    width: 100%;
+    height: 50%;
+  }
+
+  .frame{
+    width: 300px;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width:701px) {
+    .title{
+      font-size: 100px;
+      height: 30%;
+    }
+
+    .mainwrapper{
+      max-height: calc(0.65*1080px);
+      min-height: calc(0.6*1080px);
+    }
+  
+    .subwrapper{
+      max-width: 1440px;
+    }
+
+    .body{
+      flex-direction: row;
+      gap: 25px;
+      height: 70%;
+    }
+
+    .frameswrapper{
+      width: 50%;
+      height: 100%;
+      gap: 25px;
+    }
+
+    .frame{
+      width: 200px;
+      height: 200px;
+    }
+}
+
+
+
+
+
 .howToBuy1 {
   align-self: stretch;
   position: relative;

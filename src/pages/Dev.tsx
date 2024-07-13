@@ -17,8 +17,8 @@ const Dev: FunctionComponent = () => {
       {/* <Gallery /> */}
       <Roadmap />
       <Marvnomics />
-      {/* <Howtobuy />
-      <Marvmemes />
+      <Howtobuy />
+      {/* <Marvmemes />
       <Footer /> */}
     </div>
   );
