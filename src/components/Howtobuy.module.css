@@ -86,7 +86,7 @@
   }
 
   .frame{
-    width: 300px;
+    width: 320px;
     height: 150px;
   }
 }
@@ -122,6 +122,8 @@
       width: 200px;
       height: 200px;
     }
+
+    .framesubtitle{font-size: 14;}
 }
 
 
