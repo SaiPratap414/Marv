@@ -54,12 +54,12 @@ const Framecontainer=(props:{className:string,image:string,title:string,subTitle
   return(
     <div className={[styles.framewrapper, props.className].join(" ")}>
       <img
-        style={{width:"auto",height:"70%"}}
+        style={{width:"auto",height:"60%"}}
         loading="lazy"
         alt=""
         src={props.image}
       />
-      <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"column",alignItems:"center"}}>
+      <div style={{height:"35%",width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
         <p className={[styles.frametitle, props.className].join(" ")}>{props.title}</p>
         <p className={[styles.framesubtitle, props.className].join(" ")}>{props.subTitle}</p>
       </div>
