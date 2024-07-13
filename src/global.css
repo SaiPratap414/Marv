@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barrio:wght@400&display=swap");
@@ -7,6 +6,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Da:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap);
+
 @font-face {
   font-family: "Pure Joy";
   src: url("/public/Pure Joy.ttf");
@@ -23,12 +25,14 @@ body {
 :root {
   /* fonts */
   --font-patrick-hand: "Patrick Hand";
+  --font-patrick-hand-SC: "Patrick Hand SC";
   --font-pure-joy: "Pure Joy";
   --font-acme: Acme;
   --font-charm: Charm;
   --font-baloo-da: "Baloo Da";
   --font-annie-use-your-telescope: "Annie Use Your Telescope";
   --font-anton: Anton;
+  --font-bangers:Bangers;
 
   /* font sizes */
   --font-size-base: 16px;

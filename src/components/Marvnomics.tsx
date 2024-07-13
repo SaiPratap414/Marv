@@ -11,7 +11,63 @@ export type MarvnomicsType = {
 const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
 
   return (
-    <section style={{width:"100%",height:"100vh",maxHeight:"700px",minHeight:"650px",display:"flex",gap:"10%",flexDirection:"column",justifyContent:"center",alignItems:"center",padding:"20px"}} className={[styles.marvnomics, className].join(" ")} data-scroll-to="Marvnomics">
+    <section className={[styles.mainwrapper, className].join(" ")} id="header">
+      <div className={[styles.subwrapper, className].join(" ")}>
+        <div className={[styles.title, className].join(" ")}>MARVNOMICS</div>
+        <div className={[styles.body, className].join(" ")}>
+          <div className={[styles.frameswrapper, className].join(" ")}>
+            <div style={{display:"flex",flexDirection:"row"}}>
+              <div className={[styles.frame, className].join(" ")}>
+                <Framecontainer className={className} image={"/marv-web-new-set0005@2x.png"} title="Taxes" subTitle="0/0"></Framecontainer>
+              </div>
+              <div className={[styles.frame, className].join(" ")}>
+                <Framecontainer className={className} image={"/marv-web-new-set0003@2x.png"} title="Freeze & Mint" subTitle="Revoke"></Framecontainer>
+              </div>
+            </div>
+            <div style={{display:"flex",flexDirection:"row"}}>
+              <div className={[styles.frame, className].join(" ")}>
+                <Framecontainer className={className} image={"/marv-web-new-set0002@2x.png"} title="Total Supply" subTitle="100M"></Framecontainer>
+              </div>
+              <div className={[styles.frame, className].join(" ")}>
+                <Framecontainer className={className} image={"/marv-web-new-set0004@2x.png"} title="Liquidity" subTitle="Burned"></Framecontainer>
+              </div>
+            </div>
+          </div>
+          <div className={[styles.description, className].join(" ")}>
+            <p style={{margin:"10px"}}>
+              Marv's journey in the Solana world is a testament to his unique
+              approach to leadership. He continues to engage with his community,
+              embracing their support and feedback. His dedication to
+              decentralization and community growth remains at the heart of his
+              reign, inspiring others to join him in creating a vibrant and
+              inclusive ecosystem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Framecontainer=(props:{className:string,image:string,title:string,subTitle:string})=>{
+
+  return(
+    <div className={[styles.framewrapper, props.className].join(" ")}>
+      <img
+        style={{width:"auto",height:"70%"}}
+        loading="lazy"
+        alt=""
+        src={props.image}
+      />
+      <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"column",alignItems:"center"}}>
+        <p className={[styles.frametitle, props.className].join(" ")}>{props.title}</p>
+        <p className={[styles.framesubtitle, props.className].join(" ")}>{props.subTitle}</p>
+      </div>
+    </div>
+  )
+}
+
+{/* <section style={{width:"100%",height:"100vh",maxHeight:"700px",minHeight:"650px",display:"flex",gap:"10%",flexDirection:"column",justifyContent:"center",alignItems:"center",padding:"20px"}} className={[styles.marvnomics, className].join(" ")} data-scroll-to="Marvnomics">
       <div style={{width:"100%",maxWidth:"1440px",height:"100%",padding:"75px",gap:"30px",display:"flex",flexDirection:"column"}}>
         <div style={{height:"30%",width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"15px"}}>
           <div className={styles.marvnomics1}>MARVNOMICS</div>
@@ -44,23 +100,7 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
           /></div>
         </div>
       </div>
-    </section>
-  );
-};
-
-const Framecontainer=(props:{image:string})=>{
-
-  return(
-    <div style={{width:"100%",height:"100%",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:'center',borderRadius:"40px",backgroundImage:"linear-gradient(45deg,#9945FF, #14F195)"}}>
-      <img
-        style={{width:"50%",height:"auto"}}
-        loading="lazy"
-        alt=""
-        src={props.image}
-      />
-    </div>
-  )
-}
+    </section> */}
 
 {/* <section className={[styles.marvnomics, className].join(" ")} data-scroll-to="Marvnomics">
   <div className={styles.conteTWrapper}>

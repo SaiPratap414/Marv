@@ -16,73 +16,67 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
   },[])
 
   return (
-    <section style={{width:"100%",height:"200vh",maxHeight:"1400px",minHeight:"1300px",display:"flex",gap:"10%",padding:"20px",flexDirection:"column",justifyContent:"center",alignItems:"center"}} className={[styles.roadmap, className].join(" ")} data-scroll-to="Roadmap">
-      <div style={{width:"100%",height:"100%",maxWidth:"1440px",padding:"50px"}}>
-        <div style={{width:"100%",height:"5%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}><h1 style={{textAlign:"center",margin:"10px"}}>ROADMAPP</h1></div>
-        <div style={{height:"95%",width:"100%",display:"flex",flexDirection:"column"}}>
-          <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
-            <div style={{width:"50%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"relative"}}>
-              <div style={{position:"absolute",top:"100%",left:"80%",transform:"scaleX(-1) rotatez(10deg)"}}>
-                <img
-                    style={{width:"80%",height:"auto"}}
-                    loading="lazy"
-                    alt=""
-                    src="/vector-18.svg"
-                  />
-              </div>
+    <section className={[styles.mainwrapper, className].join(" ")} id="header">
+      <div className={[styles.subwrapper, className].join(" ")}>
+        <div className={[styles.title, className].join(" ")}>ROADMAP</div>
+        <div className={[styles.roadmap, className].join(" ")}>
+          <div className={[styles.state1wrapper, className].join(" ")}>
+            <div className={[styles.state1, className].join(" ")}>
               <img
-                style={{width:"80%",height:"auto"}}
+                className={[styles.arrow1, className].join(" ")}
                 loading="lazy"
                 alt=""
-                src="/frame-119@2x.png"
-              /></div>
-            <div style={{width:"50%",height:"100%"}}></div>
+                src={"/arrow.png"}
+              />
+              <img
+                style={{width:"auto",height:"100%"}}
+                loading="lazy"
+                alt=""
+                src={"/roadmap_1.png"}
+              />
+            </div>
           </div>
-          <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
-            <div style={{width:"50%",height:"100%"}}></div>
-            <div style={{width:"50%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"relative"}}>
-              <div style={{position:"absolute",top:"100%",left:"0%"}}>
-                <img
-                    style={{width:"80%",height:"auto"}}
-                    loading="lazy"
-                    alt=""
-                    src="/vector-18.svg"
-                  />
-              </div>
+          <div className={[styles.state2wrapper, className].join(" ")}>
+            <div className={[styles.state2, className].join(" ")}>
               <img
-                style={{width:"80%",height:"auto"}}
+                className={[styles.arrow2, className].join(" ")}
                 loading="lazy"
                 alt=""
-                src="/frame-123@2x.png"
-              /></div>
+                src={"/arrow.png"}
+              />
+              <img
+                style={{width:"auto",height:"100%"}}
+                loading="lazy"
+                alt=""
+                src={"/roadmap_1.png"}
+              />
+            </div>
           </div>
-          <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
-            <div style={{width:"50%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"relative"}}>
-              <div style={{position:"absolute",top:"100%",left:"80%",transform:"scaleX(-1) rotatez(10deg)"}}>
-                <img
-                    style={{width:"80%",height:"auto"}}
-                    loading="lazy"
-                    alt=""
-                    src="/vector-18.svg"
-                  />
-              </div>
+          <div className={[styles.state3wrapper, className].join(" ")}>
+            <div className={[styles.state3, className].join(" ")}>
               <img
-                style={{width:"80%",height:"auto"}}
+                className={[styles.arrow1, className].join(" ")}
                 loading="lazy"
                 alt=""
-                src="/frame-124@2x.png"
-              /></div>
-            <div style={{width:"50%",height:"100%"}}></div>
+                src={"/arrow.png"}
+              />
+              <img
+                style={{width:"auto",height:"100%"}}
+                loading="lazy"
+                alt=""
+                src={"/roadmap_1.png"}
+              />
+            </div>
           </div>
-          <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
-            <div style={{width:"50%",height:"100%"}}></div>
-            <div style={{width:"50%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+          <div className={[styles.state4wrapper, className].join(" ")}>
+            <div className={[styles.state4, className].join(" ")}>
               <img
-                style={{width:"80%",height:"auto"}}
+                style={{width:"auto",height:"100%"}}
                 loading="lazy"
                 alt=""
-                src="/frame-119@2x.png"
-              /></div>
+                src={"/roadmap_1.png"}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -92,6 +86,77 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
 
 export default Roadmap;
 
+{/* <section style={{width:"100%",height:"200vh",maxHeight:"1400px",minHeight:"1300px",display:"flex",gap:"10%",padding:"20px",flexDirection:"column",justifyContent:"center",alignItems:"center"}} className={[styles.roadmap, className].join(" ")} data-scroll-to="Roadmap">
+  <div style={{width:"100%",height:"100%",maxWidth:"1440px",padding:"50px"}}>
+    <div style={{width:"100%",height:"5%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}><h1 style={{textAlign:"center",margin:"10px"}}>ROADMAPP</h1></div>
+    <div style={{height:"95%",width:"100%",display:"flex",flexDirection:"column"}}>
+      <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
+        <div style={{width:"50%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"relative"}}>
+          <div style={{position:"absolute",top:"100%",left:"80%",transform:"scaleX(-1) rotatez(10deg)"}}>
+            <img
+                style={{width:"80%",height:"auto"}}
+                loading="lazy"
+                alt=""
+                src="/vector-18.svg"
+              />
+          </div>
+          <img
+            style={{width:"80%",height:"auto"}}
+            loading="lazy"
+            alt=""
+            src="/frame-119@2x.png"
+          /></div>
+        <div style={{width:"50%",height:"100%"}}></div>
+      </div>
+      <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
+        <div style={{width:"50%",height:"100%"}}></div>
+        <div style={{width:"50%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"relative"}}>
+          <div style={{position:"absolute",top:"100%",left:"0%"}}>
+            <img
+                style={{width:"80%",height:"auto"}}
+                loading="lazy"
+                alt=""
+                src="/vector-18.svg"
+              />
+          </div>
+          <img
+            style={{width:"80%",height:"auto"}}
+            loading="lazy"
+            alt=""
+            src="/frame-123@2x.png"
+          /></div>
+      </div>
+      <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
+        <div style={{width:"50%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"relative"}}>
+          <div style={{position:"absolute",top:"100%",left:"80%",transform:"scaleX(-1) rotatez(10deg)"}}>
+            <img
+                style={{width:"80%",height:"auto"}}
+                loading="lazy"
+                alt=""
+                src="/vector-18.svg"
+              />
+          </div>
+          <img
+            style={{width:"80%",height:"auto"}}
+            loading="lazy"
+            alt=""
+            src="/frame-124@2x.png"
+          /></div>
+        <div style={{width:"50%",height:"100%"}}></div>
+      </div>
+      <div style={{height:"25%",width:"100%",display:"flex",flexDirection:"row"}}>
+        <div style={{width:"50%",height:"100%"}}></div>
+        <div style={{width:"50%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+          <img
+            style={{width:"80%",height:"auto"}}
+            loading="lazy"
+            alt=""
+            src="/frame-119@2x.png"
+          /></div>
+      </div>
+    </div>
+  </div>
+</section> */}
 
 {/* <section className={[styles.roadmap, className].join(" ")} data-scroll-to="Roadmap">
   <div className={styles.roadmapInner}>

@@ -75,9 +75,11 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={isMobileView ? <Mobmarvel /> : <Dev />} />
+      <Route path="/" element={<Dev />} />
     </Routes>
   );
 }
+
+{/* <Route path="/" element={isMobileView ? <Mobmarvel /> : <Dev />} /> */}
 
 export default App;

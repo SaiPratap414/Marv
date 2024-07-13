@@ -14,7 +14,7 @@ const Dev: FunctionComponent = () => {
     <div className={styles.dev}>
       <Header />
       <AboutUs />
-      <Gallery />
+      {/* <Gallery /> */}
       <Roadmap />
       <Marvnomics />
       <Howtobuy />

@@ -1,6 +1,127 @@
+/* @import url("../misc/appdata.js"); */
 
-.header {
-  /* width: 100%; */
+.header{
+  width:100vw;
+  height: 100vh;
+  background-image: linear-gradient(#0252B2,#561D6C);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerwrapper{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar{
+  height: 10%;
+}
+
+.titlecontainer{
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-family:var(--font-pure-joy);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.buynowwrapper{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  
+}
+.buynowbutton{
+  background-image:linear-gradient(#015624,#01A143);
+  border-radius: 100px;
+  border: none;
+  padding: 5px 15px;
+  border-color: black;
+  border-width: 1vmin;
+}
+.buynowtext{
+  color: white;
+  font-family: var(--font-bangers);
+}
+
+.subtitle{
+  max-width:75%;
+  text-align:center;
+  font-family:var(--font-patrick-hand);
+  color:white;
+}
+
+.bg{
+  width: 100%;
+  height:auto;
+
+}
+
+@media screen and (max-width:700px) {
+
+  .title{
+    font-size: 120px;
+  }
+
+  .buynowtext{
+    font-size: 18px;
+  }
+
+  .header{
+    max-height: 800px;
+    min-height: 700px;
+    min-width: 320px;
+  }
+
+  .headerwrapper{
+    min-width: 320px;
+    /* background-image: url(../../public/HomeBgMobile.png); */
+  }
+
+  .subtitle{
+    font-size:20px
+  }
+}
+
+@media screen and (min-width:701px) {
+
+  .title{
+    font-size: 200px;
+  }
+
+  .buynowtext{
+    font-size: 24px;
+  }
+
+  .header{
+    max-height: 1080px;
+    min-height: 900px;
+  }
+
+  .headerwrapper{
+    max-width: 1440px;
+    /* background-image: url(../../public/HomeBgLaptop.png); */
+  }
+
+  .subtitle{
+    font-size:24px
+  }
+}
+
+
+
+/* .header {
   background-color: var(--color-darkslateblue);
   border-bottom: 3px solid var(--polaonbasecom-black);
   box-sizing: border-box;
@@ -10,15 +131,13 @@
   justify-content: flex-start;
   padding: var(--padding-51xl) var(--padding-xl) var(--padding-8xs);
   gap: var(--gap-75xl);
-  /* max-height: 722px; */
   text-align: center;
   font-size: var(--font-size-201xl);
   color: var(--polaonbasecom-black);
   font-family: var(--font-pure-joy);
-  /* min-height: 100vh; */
   max-width: 100%;
-}
-@media screen and (max-width: 1200px) {
+} */
+/* @media screen and (max-width: 1200px) {
   .header {
     gap: var(--gap-28xl);
     padding-top: var(--padding-26xl);
@@ -30,4 +149,4 @@
   .header {
     gap: var(--gap-4xl);
   }
-}
+} */
