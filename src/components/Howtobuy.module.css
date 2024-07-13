@@ -65,7 +65,7 @@
   }
 
   .mainwrapper{
-    max-height: 800px;
+    max-height: 850px;
     min-height: 700px;
     min-width: 360px;
   }
@@ -76,7 +76,7 @@
 
   .body{
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     height: 85%;
   }
 
