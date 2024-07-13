@@ -80,8 +80,8 @@
   }
 
   .mainwrapper{
-    max-height: calc(800px);
-    min-height: calc(800px);
+    max-height: 1000px;
+    min-height: 1000px;
     min-width: 320px;
   }
 

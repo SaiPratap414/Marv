@@ -79,8 +79,8 @@
   }
 
   .header{
-    max-height: 800px;
-    min-height: 700px;
+    max-height: 700px;
+    min-height: 600px;
     min-width: 320px;
   }
 

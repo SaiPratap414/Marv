@@ -70,7 +70,7 @@
 
 @media screen and (max-width:700px) {
   .title{
-    font-size: 120px;
+    font-size: 80px;
   }
 
   .mainwrapper{
@@ -100,7 +100,7 @@
 
 @media screen and (min-width:701px) {
     .title{
-      font-size: 80px;
+      font-size: 160px;
     }
 
     .mainwrapper{
