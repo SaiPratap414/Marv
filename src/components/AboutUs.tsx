@@ -13,7 +13,7 @@ const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
   },[])
 
   return (
-    <section className={[styles.mainwrapper, className].join(" ")} id="header">
+    <section className={[styles.mainwrapper, className].join(" ")} id="aboutus" data-scroll-to="about-us">
       <div className={[styles.subwrapper, className].join(" ")}>
         <img
           className={[styles.cloud1, className].join(" ")}

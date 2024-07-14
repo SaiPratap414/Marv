@@ -9,7 +9,7 @@ const Marvmemes: FunctionComponent<MarvmemesType> = ({ className = "" }) => {
 
 
   return (
-    <section className={[styles.mainwrapper, className].join(" ")} id="header">
+    <section className={[styles.mainwrapper, className].join(" ")} id="marv-memes"  data-scroll-to="marv-memes">
       <div className={[styles.subwrapper, className].join(" ")}>
         <div className={[styles.title, className].join(" ")}>MARVMEMES</div>
         <div className={[styles.componentbody, className].join(" ")}>

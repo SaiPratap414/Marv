@@ -1,6 +1,8 @@
-const Navbar=()=>{
+import styles from "./Navbar.module.css";
+
+const Navbar=(props:{className:string,layout:"web"|"mobile"|"tab"})=>{
     return (
-        <div></div>
+        <div className={[styles.mainwrapper, props.className].join(" ")}></div>
     )
 }
 

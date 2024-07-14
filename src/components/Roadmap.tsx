@@ -16,7 +16,7 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
   },[])
 
   return (
-    <section className={[styles.mainwrapper, className].join(" ")} id="header">
+    <section className={[styles.mainwrapper, className].join(" ")} id="roadmap" data-scroll-to="roadmap">
       <div className={[styles.subwrapper, className].join(" ")}>
         <div className={[styles.title, className].join(" ")}>ROADMAP</div>
         <div className={[styles.roadmap, className].join(" ")}>

@@ -11,7 +11,7 @@ export type MarvnomicsType = {
 const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
 
   return (
-    <section className={[styles.mainwrapper, className].join(" ")} id="header">
+    <section className={[styles.mainwrapper, className].join(" ")} id="marvnomics" data-scroll-to="marvnomics">
       <div className={[styles.subwrapper, className].join(" ")}>
         <div className={[styles.title, className].join(" ")}>MARVNOMICS</div>
         <div className={[styles.body, className].join(" ")}>

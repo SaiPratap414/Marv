@@ -14,7 +14,7 @@ const Howtobuy: FunctionComponent<HowtobuyType> = ({ className = "" }) => {
   },[])
 
   return (
-    <section className={[styles.mainwrapper, className].join(" ")} id="header">
+    <section className={[styles.mainwrapper, className].join(" ")} id="how-to-buy" data-scroll-to="how-to-buy">
       <div className={[styles.subwrapper, className].join(" ")}>
         <div className={[styles.title, className].join(" ")}>How To Buy</div>
         <div className={[styles.componentbody, className].join(" ")}>
