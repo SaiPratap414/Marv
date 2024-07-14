@@ -52,7 +52,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
     <section className={[styles.header, className].join(" ")} id="header" data-scroll-to="header">
       <div  className={[styles.headerwrapper, className].join(" ")}>
         <div className={[styles.navOptions, className].join(" ")} style={{transform:"scaleY("+navbarScale+")",height:navbarHeight,zIndex:1}}>
-          <div style={{width:"100%",height:"10%",display:"flex",justifyContent:"end"}}><button onClick={()=>{setNavbarHeight("0%");setTimeout(()=>setNavbarScale(0),700)}} style={{alignSelf:"end",margin:"none",border:"none",backgroundColor:"transparent"}}><img style={{height:"24px",width:"auto"}} src="/close.png"></img></button></div>
+          <div style={{width:"100%",height:"10%",display:"flex",justifyContent:"end"}}><button onClick={()=>{setNavbarHeight("0%");setTimeout(()=>setNavbarScale(0),300)}} style={{alignSelf:"end",height:"100%",margin:"none",border:"none",backgroundColor:"transparent"}}><img style={{height:"100%",width:"auto"}} src="/close.png"></img></button></div>
           <div style={{width:"100%",height:"85%",display:"flex",flexDirection:"column",alignItems:"start",justifyContent:"center",gap:"5%",fontFamily:"var(--font-bangers)",color:"#0353B2"}}>
           {
             navOptions.map((navItem)=>
