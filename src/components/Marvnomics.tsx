@@ -15,23 +15,11 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
       <div className={[styles.subwrapper, className].join(" ")}>
         <div className={[styles.title, className].join(" ")}>MARVNOMICS</div>
         <div className={[styles.body, className].join(" ")}>
-          <div className={[styles.frameswrapper, className].join(" ")}>
-            <div style={{display:"flex",flexDirection:"row"}}>
-              <div className={[styles.frame, className].join(" ")}>
-                <Framecontainer className={className} image={"/marv-web-new-set0005@2x.png"} title="Taxes" subTitle="0/0"></Framecontainer>
-              </div>
-              <div className={[styles.frame, className].join(" ")}>
-                <Framecontainer className={className} image={"/marv-web-new-set0003@2x.png"} title="Freeze & Mint" subTitle="Revoke"></Framecontainer>
-              </div>
-            </div>
-            <div style={{display:"flex",flexDirection:"row"}}>
-              <div className={[styles.frame, className].join(" ")}>
-                <Framecontainer className={className} image={"/marv-web-new-set0002@2x.png"} title="Total Supply" subTitle="100M"></Framecontainer>
-              </div>
-              <div className={[styles.frame, className].join(" ")}>
-                <Framecontainer className={className} image={"/marv-web-new-set0004@2x.png"} title="Liquidity" subTitle="Burned"></Framecontainer>
-              </div>
-            </div>
+          <div className={[styles.framescontainer, className].join(" ")}>
+            <Framecontainer className={className} image={"/marv-web-new-set0005@2x.png"} title="Taxes" subTitle="0/0" border="linear-gradient(to right, #FF8B8B 0%, #AA5959 100%) 1"></Framecontainer>
+            <Framecontainer className={className} image={"/marv-web-new-set0003@2x.png"} title="Freeze & Mint" subTitle="Revoke" border="linear-gradient(to right, #FAB989 0%, #9F7557 100%) 1"></Framecontainer>
+            <Framecontainer className={className} image={"/marv-web-new-set0002@2x.png"} title="Total Supply" subTitle="100M" border="linear-gradient(to right, #579E96 0%, #8AFBED 100%) 1"></Framecontainer>
+            <Framecontainer className={className} image={"/marv-web-new-set0004@2x.png"} title="Liquidity" subTitle="Burned" border="linear-gradient(to right, #897CB0 0%, #C0AEF6 100%) 1"></Framecontainer>
           </div>
           <div className={[styles.description, className].join(" ")}>
             <p style={{margin:"10px"}}>
@@ -49,16 +37,18 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
   );
 };
 
-const Framecontainer=(props:{className:string,image:string,title:string,subTitle:string})=>{
+const Framecontainer=(props:{className:string,image:string,title:string,subTitle:string,border:string})=>{
 
   return(
-    <div className={[styles.framewrapper, props.className].join(" ")}>
-      <img
-        style={{width:"auto",height:"60%"}}
-        loading="lazy"
-        alt=""
-        src={props.image}
-      />
+    <div className={[styles.framewrapper, props.className].join(" ")} style={{borderImage:props.border}}>
+      <div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <img
+          style={{width:"110px",height:"auto"}}
+          loading="lazy"
+          alt=""
+          src={props.image}
+        />
+      </div>
       <div style={{height:"35%",width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
         <p className={[styles.frametitle, props.className].join(" ")}>{props.title}</p>
         <p className={[styles.framesubtitle, props.className].join(" ")}>{props.subTitle}</p>

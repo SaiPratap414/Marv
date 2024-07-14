@@ -23,16 +23,20 @@
   color: white;
   text-shadow:0px 10px black;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.body{
+/* .body{
   display: flex;
-}
+} */
 
 .frametitle{
   text-align: center;
   font-family: var(--font-bangers);
   margin: 5px;
+  max-width: 75%;
 }
 
 .framesubtitle{
@@ -41,12 +45,12 @@
   margin: 0;
 }
 
-.frameswrapper{
+/* .frameswrapper{
   display: flex;
   flex-direction: row;
   align-self: center;
   justify-content: center;
-}
+} */
 
 .frame{
   display: flex;
@@ -56,9 +60,48 @@
   align-self: center;
   border-radius: 20px;
   color: white;
+  width: 100%;
+  height: 100%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:500px) {
+  .title{
+    font-size: 50px;
+    height: 15%;
+  }
+
+  .mainwrapper{
+    max-height: 850px;
+    min-height: 720px;
+    min-width: 320px;
+  }
+
+  .subwrapper{
+    min-width: 320px;
+  }
+
+  .componentbody{
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr;
+    gap: 30px;
+    height: 85%;
+    margin: 15px;
+  }
+
+  /* .frameswrapper{
+    width: 100%;
+    height: 50%;
+  } */
+
+  .frame{
+    /* width: 340px;
+    height: 150px; */
+  }
+}
+
+@media screen and (min-width:501px) and (max-width:1024px) {
   .title{
     font-size: 60px;
     height: 15%;
@@ -74,24 +117,32 @@
     min-width: 360px;
   }
 
-  .body{
-    flex-direction: column;
-    gap: 30px;
+  .componentbody{
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-columns:1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
     height: 85%;
+    margin: 25px;
   }
 
-  .frameswrapper{
+  /* .frameswrapper{
     width: 100%;
     height: 50%;
+  } */
+
+  .frametitle{
+    font-size: 20px;
   }
 
-  .frame{
-    width: 340px;
-    height: 150px;
+  .framesubtitle{
+    font-size: 18px;
   }
 }
 
-@media screen and (min-width:701px) {
+@media screen and (min-width:1025px) {
     .title{
       font-size: 100px;
       height: 30%;
@@ -106,24 +157,29 @@
       max-width: 1440px;
     }
 
-    .body{
-      flex-direction: row;
-      gap: 25px;
+    .componentbody{
+      /* flex-direction: column; */
+      display: grid;
+      grid-template-rows:1fr;
+      grid-template-columns:1fr 1fr 1fr 1fr;
+      gap: 30px;
       height: 70%;
+      margin: 15px;
     }
 
-    .frameswrapper{
+    /* .frameswrapper{
       width: 50%;
       height: 100%;
       gap: 25px;
-    }
+    } */
 
-    .frame{
-      width: 200px;
-      height: 200px;
+    .frametitle{
+      font-size: 28px;
     }
-
-    .framesubtitle{font-size: 14;}
+  
+    .framesubtitle{
+      font-size: 20px;
+    }
 }
 
 

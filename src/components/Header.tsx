@@ -46,7 +46,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             className={styles.bg}
             loading="lazy"
             alt=""
-            src={layout=="mobile"?"/HomeBgMobile.png":"/HomeBgLaptop.png"}
+            src={layout=="mobile"?"/HomeBgMobile.png":(layout=="tab"?"/HomeBgIpad.png":"/HomeBgLaptop.png")}
           />
         </div>
       </div>
@@ -55,7 +55,20 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
 }
 
 const getLayout=()=>{
-  return window.innerWidth<=700?"mobile":"web"
+  let layout="web";
+  if(window.innerWidth<=500)
+  {
+    layout="mobile"
+  }
+  if(window.innerWidth>500 && window.innerWidth<=1080)
+  {
+    layout="tab"
+  }
+  // if(window.innerWidth>500 && window.innerWidth<=1080)
+  // {
+    
+  // }
+  return layout
 }
 
 export default Header
