@@ -48,15 +48,27 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
     scrollToSection(sectionId);
   };
 
+  const navHandler=(action:"open"|"close")=>{
+    if(action=="open")
+    {
+      setNavbarScale(1);
+      setNavbarHeight("50%")
+    }
+    if(action=="close"){
+      setNavbarHeight("0%");
+      setTimeout(()=>setNavbarScale(0),300)
+    }
+  }
+
   return (
     <section className={[styles.header, className].join(" ")} id="header" data-scroll-to="header">
       <div  className={[styles.headerwrapper, className].join(" ")}>
         <div className={[styles.navOptions, className].join(" ")} style={{transform:"scaleY("+navbarScale+")",height:navbarHeight,zIndex:1}}>
-          <div style={{width:"100%",height:"10%",display:"flex",justifyContent:"end"}}><button onClick={()=>{setNavbarHeight("0%");setTimeout(()=>setNavbarScale(0),300)}} style={{alignSelf:"end",height:"100%",margin:"none",border:"none",backgroundColor:"transparent"}}><img style={{height:"100%",width:"auto"}} src="/close.png"></img></button></div>
+          <div style={{width:"100%",height:"10%",display:"flex",justifyContent:"end"}}><button onClick={()=>navHandler("close")} style={{alignSelf:"end",height:"100%",margin:"none",border:"none",backgroundColor:"transparent"}}><img style={{height:"100%",width:"auto"}} src="/close.png"></img></button></div>
           <div style={{width:"100%",height:"85%",display:"flex",flexDirection:"column",alignItems:"start",justifyContent:"center",gap:"5%",fontFamily:"var(--font-bangers)",color:"#0353B2"}}>
           {
             navOptions.map((navItem)=>
-            <a onClick={()=>handleNavClick(navItem.id)}>{navItem.name}</a>
+            <a onClick={()=>{handleNavClick(navItem.id);navHandler("close")}}>{navItem.name}</a>
             )
           }
           </div>
@@ -65,7 +77,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
           layout=="mobile"
           ?
           <div className={[styles.navbar, className].join(" ")}>
-              <div style={{width:"50%"}}><button onClick={()=>{setNavbarScale(1);setNavbarHeight("50%")}} style={{alignSelf:"end",border:"none",margin:"none",backgroundColor:"transparent"}}><img style={{height:"24px",width:"auto"}} src="/menu.png"></img></button></div>
+              <div style={{width:"50%"}}><button onClick={()=>navHandler("open")} style={{alignSelf:"end",border:"none",margin:"none",backgroundColor:"transparent"}}><img style={{height:"24px",width:"auto"}} src="/menu.png"></img></button></div>
           </div>
           :
           <div className={[styles.navbar, className].join(" ")}>

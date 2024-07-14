@@ -80,6 +80,7 @@
 
   .subwrapper{
     min-width: 320px;
+    overflow: hidden;
   }
 
   .cloud1{
