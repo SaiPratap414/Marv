@@ -13,15 +13,15 @@ const Marvmemes: FunctionComponent<MarvmemesType> = ({ className = "" }) => {
       <div className={[styles.subwrapper, className].join(" ")}>
         <div className={[styles.title, className].join(" ")}>MARVMEMES</div>
         <div className={[styles.componentbody, className].join(" ")}>
-          <Framecontainer className={className} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/1.png" rotation="3deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#F9B889, #926546)" image="/marvmemes/2.png" rotation="3deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#58A098, #69C6BA)" image="/marvmemes/3.png" rotation="-3deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/4.png" rotation="3deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/5.png" rotation="3deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#F9B889, #926546)" image="/marvmemes/6.png" rotation="-3deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#58A098, #69C6BA)" image="/marvmemes/7.png" rotation="3deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/8.png" rotation="-3deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/9.png" rotation="3deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/1.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#F9B889, #926546)" image="/marvmemes/2.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#58A098, #69C6BA)" image="/marvmemes/3.png" rotation="-2deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/4.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/5.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#F9B889, #926546)" image="/marvmemes/6.png" rotation="-2deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#58A098, #69C6BA)" image="/marvmemes/7.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/8.png" rotation="-2deg"></Framecontainer>
+          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/9.png" rotation="2deg"></Framecontainer>
         </div>
       </div>
     </section>
@@ -31,7 +31,7 @@ const Marvmemes: FunctionComponent<MarvmemesType> = ({ className = "" }) => {
 const Framecontainer=(props:{className:string,image:string,rotation:string,color:string})=>{
 
   return(
-    <div className={[styles.frame, props.className].join(" ")} style={{transform:"rotate("+props.rotation+")"}}>
+    <div className={[styles.frame, props.className].join(" ")} style={{transform:"rotate("+props.rotation+")",borderTopLeftRadius:"10px",borderBottomRightRadius:"10px"}}>
       <img
       className={[styles.frameimage, props.className].join(" ")}
         loading="lazy"
