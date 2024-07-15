@@ -114,8 +114,8 @@
   }
 
   .header{
-    max-height: 850px;
-    min-height: 800px;
+    max-height: 800px;
+    min-height: 750px;
     min-width: 320px;
   }
 
