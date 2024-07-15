@@ -29,7 +29,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
         <div className={[styles.body, className].join(" ")}>
           <div className={[styles.description1wrapper, className].join(" ")}>
             <div className={[styles.description1, className].join(" ")}>Risk Disclousure</div>
-            <div className={[styles.description1, className].join(" ")}>Risk Disclousure</div>
+            <div className={[styles.description1, className].join(" ")}>Legal Disclaimer</div>
           </div>
           <div className={[styles.description2wrapper, className].join(" ")}>
             <div className={[styles.buymarv, className].join(" ")}>Buy Marv</div>
