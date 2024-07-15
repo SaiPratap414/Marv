@@ -128,7 +128,7 @@
 
 @media screen and (min-width:1025px) {
     .title{
-      font-size: 160px;
+      font-size: 200px;
     }
 
     .mainwrapper{
@@ -137,7 +137,7 @@
     }
   
     .subwrapper{
-      max-width: 1440px;
+      max-width: 2000px;
     }
 
     .state1,.state3{

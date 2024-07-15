@@ -43,7 +43,7 @@ const Framecontainer=(props:{className:string,image:string,title:string,subTitle
     <div className={[styles.framewrapper, props.className].join(" ")} style={{borderImage:props.border}}>
       <div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center"}}>
         <img
-          style={{width:"110px",height:"auto"}}
+          className={[styles.frameimage, props.className].join(" ")}
           loading="lazy"
           alt=""
           src={props.image}

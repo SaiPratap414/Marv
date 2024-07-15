@@ -42,11 +42,11 @@
 }
 
 .titlecontainer{
-  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .title{
@@ -77,10 +77,15 @@
 }
 
 .subtitle{
-  max-width:75%;
   text-align:center;
   font-family:var(--font-patrick-hand);
   color:white;
+}
+
+.bgwrapper{
+  display:flex;
+  flex-direction:column;
+  justify-content:end
 }
 
 .bg{
@@ -89,10 +94,19 @@
 
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:500px) {
 
   .title{
     font-size: 100px;
+    /* height: 40%; */
+  }
+
+  .titlecontainer{
+    height: 40%;
+  }
+
+  .bgwrapper{
+    height:50%;
   }
 
   .buynowtext{
@@ -100,8 +114,8 @@
   }
 
   .header{
-    max-height: 700px;
-    min-height: 600px;
+    max-height: 900px;
+    min-height: 800px;
     min-width: 320px;
   }
 
@@ -111,32 +125,130 @@
   }
 
   .subtitle{
-    font-size:20px
+    font-size:20px;
+    max-width:350px;
+  }
+
+  .navbar{
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width:701px) {
+@media screen and (min-width:501px) and (max-width:1024px){
 
   .title{
-    font-size: 200px;
+    font-size: 150px;
+    /* height: 40%; */
+  }
+
+  .titlecontainer{
+    height: 40%;
+  }
+
+  .bgwrapper{
+    height:50%;
   }
 
   .buynowtext{
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .header{
-    max-height: 1080px;
-    min-height: 900px;
+    max-height: 850px;
+    min-height: 750px;
+    min-width: 320px;
   }
 
   .headerwrapper{
-    max-width: 1440px;
+    min-width: 320px;
+    /* background-image: url(../../public/HomeBgMobile.png); */
+  }
+
+  .subtitle{
+    font-size:20px;
+    max-width:500px;
+  }
+
+  .navbar{
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width:1025px) and (max-width:1900px) {
+
+  .title{
+    font-size: 240px;
+    /* height: 50%; */
+  }
+
+  .titlecontainer{
+    height: 60%;
+  }
+
+  .bgwrapper{
+    height:30%;
+  }
+
+  .buynowtext{
+    font-size: 40px;
+  }
+
+  .header{
+    max-height: 1200px;
+    min-height: 1100px;
+  }
+
+  .headerwrapper{
+    /* max-width: 1900px; */
     /* background-image: url(../../public/HomeBgLaptop.png); */
   }
 
   .subtitle{
-    font-size:24px
+    font-size:28px;
+    max-width:700px;
+  }
+
+  .navbar{
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width:1901px) {
+
+  .title{
+    font-size: 240px;
+    /* height: 50%; */
+  }
+
+  .titlecontainer{
+    height: 60%;
+  }
+
+  .bgwrapper{
+    height:30%;
+  }
+
+  .buynowtext{
+    font-size: 40px;
+  }
+
+  .header{
+    max-height: 1200px;
+    min-height: 1100px;
+  }
+
+  .headerwrapper{
+    max-width: 2200px;
+    /* background-image: url(../../public/HomeBgLaptop.png); */
+  }
+
+  .subtitle{
+    font-size:28px;
+    max-width:700px;
+  }
+
+  .navbar{
+    font-size: 30px;
   }
 }
 

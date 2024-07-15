@@ -69,7 +69,7 @@
 
   .description{
     font-size: 18px;
-    line-height: 20px;
+    line-height: 24px;
   }
 
   .mainwrapper{
@@ -84,37 +84,37 @@
   }
 
   .cloud1{
-    height: 60px;
+    height: 50px;
     top: 10px;
-    left: -30px;
+    left: 0px;
   }
 
   .marv1{
-    height: 100px;
+    height: 90px;
     top:80px;
-    right:-50px;
+    right:0px;
   }
 
   .cloud2{
-    height:55px;
+    height:45px;
     top: 10px;
-    right: -30px;
+    right: 0px;
   }
 
   .marv2{
-    height: 100px;
+    height: 90px;
     top:150px;
-    left:-50px;
+    left:0px;
   }
 }
 
 @media screen and (min-width:501px) and (max-width:1024px) {
   .title{
-    font-size: 115px;
+    font-size: 125px;
   }
 
   .subtitle{
-    font-size: 60px;
+    font-size: 40px;
   }
 
   .description{
@@ -132,33 +132,33 @@
   } */
 
   .cloud1{
-    height: 90px;
+    height: 80px;
     top: 10px;
     left: 10px;
   }
 
   .marv1{
-    height: 115px;
+    height: 130px;
     top:100px;
-    right:10px;
+    right:0px;
   }
 
   .cloud2{
-    height: 80px;
+    height: 70px;
     top: 10px;
     right: 10px;
   }
 
   .marv2{
-    height: 115px;
+    height: 130px;
     top:150px;
-    left:10px;
+    left:0px;
   }
 }
 
-@media screen and (min-width:1025px) {
+@media screen and (min-width:1025px) and (max-width:1900px) {
     .title{
-      font-size: 200px;
+      font-size: 220px;
     }
 
     .subtitle{
@@ -166,8 +166,8 @@
     }
 
     .description{
-      font-size: 24px;
-      line-height: 35px;
+      font-size: 28px;
+      line-height:45px;
     }
 
     .mainwrapper{
@@ -176,11 +176,11 @@
     }
   
     .subwrapper{
-      max-width: 1440px;
+      /* max-width: 1440px; */
     }
 
     .cloud1{
-      height: 80px;
+      height: 120px;
       top: 10px;
       left: 10px;
     }
@@ -192,17 +192,68 @@
     }
   
     .cloud2{
-      height: 70px;
+      height:100px;
       top: 10px;
       right: 10px;
     }
   
     .marv2{
-      height: 175px;
+      height:175px;
       top:250px;
       left:20px;
     }
 }
+
+@media screen and (min-width:1900px) {
+  .title{
+    font-size: 250px;
+  }
+
+  .subtitle{
+    font-size: 62px;
+  }
+
+  .description{
+    font-size: 32px;
+    line-height:45px;
+    max-width: 1400px;
+  }
+
+  .mainwrapper{
+    max-height: 1080px;
+    min-height: 900px;
+  }
+
+  .subwrapper{
+    max-width: 2200px;
+  }
+
+  .cloud1{
+    height:150px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .marv1{
+    height:250px;
+    top:160px;
+    right:100px;
+  }
+
+  .cloud2{
+    height:120px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .marv2{
+    height: 250px;
+    top:300px;
+    left:100px;
+  }
+}
+
+
 
 /* .groupIcon {
   align-self: stretch;

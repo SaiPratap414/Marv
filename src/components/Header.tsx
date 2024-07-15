@@ -12,7 +12,7 @@ export type HeaderType = {
 
 const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
 
-  const [layout,setLayout]=useState<"web"|"mobile"|"tab">(getLayout())
+  const [layout,setLayout]=useState<"web"|"mobile"|"tab"|"pc"|"laptop">(getLayout())
   const [navbarHeight,setNavbarHeight]=useState("0%");
   const [navbarScale,setNavbarScale]=useState(0);
   const navOptions=useRef([
@@ -81,7 +81,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
           </div>
           :
           <div className={[styles.navbar, className].join(" ")}>
-            <div style={{display:"flex",flexDirection:"row",gap:"15px"}}>
+            <div style={{display:"flex",flexDirection:"row",gap:"15px",marginLeft:"3%"}}>
               {
                 navOptions.map((navItem)=>
                 <a onClick={()=>handleNavClick(navItem.id)}>{navItem.name}</a>
@@ -93,14 +93,14 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
         }
         <div className={[styles.titlecontainer, className].join(" ")}>
           <div className={[styles.title, className].join(" ")}>
-            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(-4deg) translate(0px, 3px)"}}>M</div>
-            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(-4deg) translate(0px, -3px)"}}>A</div>
-            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(-4deg) translate(0px, 0px)"}}>R</div>
+            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(-6deg) translate(0px, 5px)"}}>M</div>
+            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(356deg) translate(0px, -3px)"}}>A</div>
+            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(1deg) translate(0px, 0px)"}}>R</div>
             <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(4deg) translate(0px, 5px)"}}>V</div>
           </div>
           <p className={styles.subtitle}>
             Marv is a slightly racist, shy frog who loves to dress
-            up.<br></br>In the world of Solana, Marv has become a unique
+            up.In the world of Solana, Marv has become a unique
             and influential figure.
           </p>
           <div className={[styles.buynowwrapper, className].join(" ")}>
@@ -109,7 +109,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             </button>
           </div>
         </div>
-        <div style={{height:"50%",display:"flex",flexDirection:"column",justifyContent:"end"}}>
+        <div className={[styles.bgwrapper, className].join(" ")}>
           <img
             className={styles.bg}
             loading="lazy"
@@ -123,14 +123,22 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
 }
 
 const getLayout=()=>{
-  let layout:"web"|"mobile"|"tab"="web";
+  let layout:"web"|"mobile"|"tab"|"pc"|"laptop"="web";
   if(window.innerWidth<=500)
   {
     layout="mobile"
   }
-  if(window.innerWidth>500 && window.innerWidth<=1080)
+  if(window.innerWidth>500 && window.innerWidth<=1024)
   {
     layout="tab"
+  }
+  if(window.innerWidth>1024 && window.innerWidth<=1920)
+  {
+    layout="laptop"
+  }
+  if(window.innerWidth>1920)
+  {
+    layout="pc"
   }
   // if(window.innerWidth>500 && window.innerWidth<=1080)
   // {
