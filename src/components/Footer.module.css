@@ -157,7 +157,7 @@
   }
 
   .marvtext{
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .jointext{
@@ -174,7 +174,7 @@
   }
 
   .metricstitle,.gopolatitle{
-    font-size: 22px;
+    font-size: 20px;
     font-family: var(--font-pure-joy);
   }
 
