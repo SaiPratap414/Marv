@@ -15,6 +15,18 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
       <div className={[styles.subwrapper, className].join(" ")}>
         <div className={[styles.title, className].join(" ")}>MARVNOMICS</div>
         <div className={[styles.body, className].join(" ")}>
+          <img
+            className={[styles.marv_beach, className].join(" ")}
+            loading="lazy"
+            alt=""
+            src={"/marv-beach.png"}
+          />
+          <img
+            className={[styles.marv_pool, className].join(" ")}
+            loading="lazy"
+            alt=""
+            src={"/marv-pool.png"}
+          />
           <div className={[styles.framescontainer, className].join(" ")}>
             <Framecontainer className={className} image={"/marv-web-new-set0005@2x.png"} title="Taxes" subTitle="0/0" border="linear-gradient(to right, #FF8B8B 0%, #AA5959 100%) 1"></Framecontainer>
             <Framecontainer className={className} image={"/marv-web-new-set0003@2x.png"} title="Freeze & Mint" subTitle="Revoke" border="linear-gradient(to right, #FAB989 0%, #9F7557 100%) 1"></Framecontainer>
