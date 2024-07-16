@@ -32,7 +32,7 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
                 style={{width:"auto",height:"100%"}}
                 loading="lazy"
                 alt=""
-                src={"/roadmap_1.png"}
+                src={"/roadmap/1.png"}
               />
             </div>
           </div>
@@ -48,7 +48,7 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
                 style={{width:"auto",height:"100%"}}
                 loading="lazy"
                 alt=""
-                src={"/roadmap_2.png"}
+                src={"/roadmap/2.png"}
               />
             </div>
           </div>
@@ -64,7 +64,7 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
                 style={{width:"auto",height:"100%"}}
                 loading="lazy"
                 alt=""
-                src={"/roadmap_3.png"}
+                src={"/roadmap/3.png"}
               />
             </div>
           </div>
@@ -74,7 +74,7 @@ const Roadmap: FunctionComponent<RoadmapType> = ({ className = "" }) => {
                 style={{width:"auto",height:"100%"}}
                 loading="lazy"
                 alt=""
-                src={"/roadmap_4.png"}
+                src={"/roadmap/4.png"}
               />
             </div>
           </div>

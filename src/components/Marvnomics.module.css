@@ -35,7 +35,7 @@
 .description{
   display: flex;
   align-items: center;
-  font-family: var(--font-bangers);
+  font-family: var(--font-patrick-hand);
   color: white;
   line-height: 35px;
   margin: 15px;

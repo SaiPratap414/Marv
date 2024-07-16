@@ -25,14 +25,14 @@
 }
 
 .subtitle{
-  font-family: var(--font-patrick-hand-SC);
+  font-family: var(--font-bangers);
   color:#FCFAC2;
   z-index: 1;
   text-align: center;
 }
 
 .description{
-  font-family: var(--font-bangers);
+  font-family: var(--font-patrick-hand) ;
   color: white;
   margin: 15px;
   text-align: center;
@@ -157,6 +157,7 @@
 }
 
 @media screen and (min-width:1025px) and (max-width:1900px) {
+
     .title{
       font-size: 220px;
     }
