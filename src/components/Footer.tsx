@@ -78,10 +78,11 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
               <div className={[styles.gopolatitle, className].join(" ")}>Go Marv!</div>
               <div className={[styles.gopolalist, className].join(" ")}>
                 <div>Join Marvarmy</div>
+                <div>TikTok</div>
                 <div>Memes</div>
                 <div>Twitter</div>
                 <div>Telegram</div>
-                <div>Reddit</div>
+                <div>Instagram</div>
               </div>
             </div>
           </div>
