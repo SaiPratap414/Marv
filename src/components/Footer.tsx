@@ -25,12 +25,13 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
   return (
     <section className={[styles.mainwrapper, className].join(" ")} id="footer" data-scroll-to="footer">
       <div className={[styles.subwrapper, className].join(" ")}>
-        <div className={[styles.title, className].join(" ")}>Disclaimer</div>
+        {/* <div className={[styles.title, className].join(" ")}>Disclaimer</div> */}
+        <div className={[styles.line, className].join(" ")}></div>
         <div className={[styles.body, className].join(" ")}>
-          <div className={[styles.description1wrapper, className].join(" ")}>
+          {/* <div className={[styles.description1wrapper, className].join(" ")}>
             <div className={[styles.description1, className].join(" ")}>Risk Disclousure</div>
             <div className={[styles.description1, className].join(" ")}>Legal Disclaimer</div>
-          </div>
+          </div> */}
           <div className={[styles.description2wrapper, className].join(" ")}>
             <div className={[styles.buymarv, className].join(" ")}>Buy Marv</div>
             <div className={[styles.contractaddwrapper, className].join(" ")}>
@@ -41,9 +42,9 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
             </div>
           </div>
           <div className={[styles.description3wrapper, className].join(" ")}>
-            <div style={{width:"26%",gap:"2%"}}>
+            <div style={{width:"33%",gap:"3%",display:"flex",flexDirection:"column"}}>
               <div className={[styles.marvtext, className].join(" ")}>MARV</div>
-              <div className={[styles.jointext, className].join(" ")}>Join the Marv at Club Base</div>
+              <div className={[styles.jointext, className].join(" ")}>Join the Marv at Marv Army</div>
               <div style={{display:"flex",flexDirection:"row",gap:"5%"}}>
                 <img
                   className={[styles.socialicons, className].join(" ")}
@@ -55,17 +56,17 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
                   className={[styles.socialicons, className].join(" ")}
                   loading="lazy"
                   alt=""
-                  src="/youtube.png"
+                  src="/telegram.png"
                 />
                   <img
                   className={[styles.socialicons, className].join(" ")}
                   loading="lazy"
                   alt=""
-                  src="/telegram.png"
+                  src="/dex.png"
                 />
               </div>
             </div>
-            <div style={{width:"26%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
+            <div style={{width:"33%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
               <div className={[styles.metricstitle, className].join(" ")}>Metrics</div>
               <div className={[styles.metricslist, className].join(" ")}>
                 <div>CoinGecko</div>
@@ -73,8 +74,8 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
                 <div>Dextools</div>
               </div>
             </div>
-            <div style={{width:"28%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
-              <div className={[styles.gopolatitle, className].join(" ")}>Go Pola Go!</div>
+            <div style={{width:"33%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
+              <div className={[styles.gopolatitle, className].join(" ")}>Go Marv!</div>
               <div className={[styles.gopolalist, className].join(" ")}>
                 <div>Join Marvarmy</div>
                 <div>Memes</div>
