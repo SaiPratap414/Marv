@@ -29,6 +29,7 @@
 }
 
 .componentbody{
+  width: 100%;
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
@@ -104,6 +105,10 @@
   .title{
     font-size: 130px;
     height: 15%;
+  }
+
+  .subwrapper{
+    max-width: 2200px;
   }
 
   .mainwrapper{

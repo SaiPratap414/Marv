@@ -33,7 +33,7 @@ const Framecontainer=(props:{className:string,footerimage:string,image:string,ti
   return(
     <div className={[styles.frame, props.className].join(" ")} style={{backgroundImage:props.color}}>
       <img
-        style={{width:"auto",height:"35px",alignSelf:"center",transform:"translateY(-17px)"}}
+        style={{width:"auto",height:"50px",alignSelf:"center",transform:"translateY(-17px)"}}
         loading="lazy"
         alt=""
         src={props.image}

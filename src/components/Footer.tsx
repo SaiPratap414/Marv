@@ -66,14 +66,14 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
                 />
               </div>
             </div>
-            <div style={{width:"33%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
+            {/* <div style={{width:"33%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
               <div className={[styles.metricstitle, className].join(" ")}>Metrics</div>
               <div className={[styles.metricslist, className].join(" ")}>
                 <div>CoinGecko</div>
                 <div>Coinmarketcap</div>
                 <div>Dextools</div>
               </div>
-            </div>
+            </div> */}
             <div style={{width:"33%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
               <div className={[styles.gopolatitle, className].join(" ")}>Go Marv!</div>
               <div className={[styles.gopolalist, className].join(" ")}>
