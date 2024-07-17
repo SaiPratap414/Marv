@@ -21,7 +21,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
     {name:"Roadmap",id:"roadmap"},
     {name:"Marvnomics",id:"marvnomics"},
     {name:"How To Buy",id:"how-to-buy"},
-    {name:"Marvmemes",id:"marv-memes"}
+    {name:"Marv PFP Gallery",id:"marv-memes"}
   ]).current
 
   const socialIcons=useRef(["/telegram.png","/twitter.png","/dex.png"]).current

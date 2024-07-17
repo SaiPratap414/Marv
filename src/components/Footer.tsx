@@ -35,7 +35,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
           <div className={[styles.description2wrapper, className].join(" ")}>
             <div className={[styles.buymarv, className].join(" ")}>Buy Marv</div>
             <div className={[styles.contractaddwrapper, className].join(" ")}>
-              <input className={styles.contractadd} placeholder="Contract address: " type="text"/>
+              <input className={styles.contractadd} placeholder="Contract address... " type="text"/>
               <div className={[styles.copyiconwrapper, className].join(" ")}>
                 <img style={{height:"100%",width:"auto"}} src="/icon-2.svg"></img>
               </div>

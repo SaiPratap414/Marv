@@ -22,8 +22,8 @@
   color: white;
   text-shadow:0px 10px black;
   z-index: 1;
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 .subtitle{
@@ -41,22 +41,23 @@
   z-index: 1;
 }
 
-/* .cloud1{
+.cloud1{
   position: absolute;
-} */
-
-.marv1{
-  /* position: absolute;
-  transform: scaleX(-1); */
 }
 
-/* .cloud2{
+.marv1{
+  position: absolute;
+  
+}
+
+.cloud2{
   position: absolute;
 }
 
 .marv2{
   position: absolute;
-} */
+  transform: scaleX(-1);
+}
 
 
 @media screen and (max-width:500px) {
@@ -85,14 +86,14 @@
     overflow: hidden;
   }
 
-  .marv1{
+  /* .marv1{
     width:auto;
     height:115px;
     object-fit: contain;
     transform: translateY(-20px);
-  }
+  } */
 
-  /* .cloud1{
+  .cloud1{
     height: 50px;
     top: 10px;
     left: 0px;
@@ -114,7 +115,7 @@
     height: 90px;
     top:150px;
     left:0px;
-  } */
+  }
 }
 
 @media screen and (min-width:501px) and (max-width:1024px) {
@@ -140,7 +141,7 @@
     min-width: 320px;
   } */
 
-  /* .cloud1{
+  .cloud1{
     height: 80px;
     top: 10px;
     left: 10px;
@@ -162,14 +163,14 @@
     height: 130px;
     top:150px;
     left:0px;
-  } */
+  }
 
-  .marv1{
+  /* .marv1{
     width:auto;
     height:140px;
     object-fit: contain;
     transform: translateY(-20px);
-  }
+  } */
 }
 
 @media screen and (min-width:1025px){
@@ -196,14 +197,14 @@
       max-width: 2200px;
     }
 
-    .marv1{
+    /* .marv1{
       width:auto;
       height:230px;
       object-fit: contain;
       transform: translateY(-20px);
-    }
+    } */
 
-    /* .cloud1{
+    .cloud1{
       height: 120px;
       top: 10px;
       left: 10px;
@@ -225,5 +226,5 @@
       height:175px;
       top:250px;
       left:20px;
-    } */
+    }
 }
