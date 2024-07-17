@@ -16,7 +16,7 @@ const Dev: FunctionComponent = () => {
       <AboutUs />
       {/* <Gallery /> */}
       <Roadmap />
-      <img style={{width:"100%",height:'auto'}} src="/scroll-bar.gif"></img>
+      <img style={{width:"100vw",maxWidth:"2000px",height:'auto',alignSelf:"center"}} src="/banner.gif"></img>
       <Marvnomics />
       <Howtobuy />
       <Marvmemes />

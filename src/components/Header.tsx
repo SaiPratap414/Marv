@@ -81,24 +81,26 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
           </div>
           :
           <div className={[styles.navbar, className].join(" ")}>
-            <div style={{display:"flex",flexDirection:"row",gap:"15px",marginLeft:"3%"}}>
+            <div style={{width:"75%",height:"75%",backgroundColor:"rgba(0, 0, 0, 0.25)"}}>
+              <div style={{display:"flex",flexDirection:"row",gap:"15px"}}>
               {
                 navOptions.map((navItem)=>
                 <a onClick={()=>handleNavClick(navItem.id)}>{navItem.name}</a>
                 )
               }
+              </div>
             </div>
-            <div>options</div>
+            {/* <div>options</div> */}
           </div>
         }
         <div className={[styles.titlecontainer, className].join(" ")}>
           <div className={[styles.title, className].join(" ")}  style={{position:"relative"}}>
-            <img
+            {/* <img
               className={[styles.hoverimg, className].join(" ")}
               loading="lazy"
               alt=""
               src={"/road-map0008@2x.png"}
-            />
+            /> */}
             <div className={[styles.M, className].join(" ")}>M</div>
             <div className={[styles.A, className].join(" ")}>A</div>
             <div className={[styles.R, className].join(" ")}>R</div>
