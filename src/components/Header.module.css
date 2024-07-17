@@ -305,6 +305,29 @@
   .navbar{
     font-size: 30px;
   }
+
+  .title:hover .hoverimg{
+    top: -54%;
+    opacity: 1;
+    transform: rotate(293deg) translateY(-50%);
+    transition: opacity 0.25s, bottom 0.25s;
+  }
+  
+  .title:hover .M{
+    transform:rotate(271deg) translate(0px, 0px)
+  }
+  
+  .title:hover .A{
+    transform:rotate(179deg) translate(0px, 4px)
+  }
+  
+  .title:hover .R{
+    transform:rotate(89deg) translate(-27px, -20px)
+  }
+  
+  .title:hover .V{
+    transform:rotate(178deg) translate(-20px, 17px)
+  }
 }
 
 /* .header {
