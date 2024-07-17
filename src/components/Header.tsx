@@ -117,7 +117,15 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
         }
         <div className={[styles.titlecontainer, className].join(" ")}>
           <div className={[styles.title, className].join(" ")}  style={{position:"relative"}}>
-            <div className={[styles.M, className].join(" ")}>M</div>
+            <div className={[styles.M, className].join(" ")}>
+              M
+              <img
+                className={[styles.marv_m, className].join(" ")}
+                loading="lazy"
+                alt=""
+                src="/marv-m.png"
+              />
+            </div>
             <div className={[styles.A, className].join(" ")}>A</div>
             <div className={[styles.R, className].join(" ")}>R</div>
             <div className={[styles.V, className].join(" ")}>V</div>
