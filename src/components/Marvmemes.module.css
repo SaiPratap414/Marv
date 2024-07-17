@@ -26,10 +26,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .componentbody{
-  width: 100%;
+  width: 90%;
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
@@ -43,22 +44,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .frameimage{
   width:auto;
   align-self:center;
-  border:10px solid white
+  z-index: 1;
+}
+
+.marvfacewrapper{
+  display:flex;
+  position:absolute;
+  flex-direction:column;
+  transition: top 0.25s;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #7349c7;
+}
+
+.marvface{
+  height: auto;
+}
+
+.download{
+  margin:5px;
+  color: white;
+  font-family: var(--font-bangers);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.frame:hover .download{
+  opacity: 1;
 }
 
 @media screen and (max-width:500px) {
   .title{
-    font-size: 50px;
+    font-size: 40px;
     height: 10%;
   }
 
   .mainwrapper{
-    max-height: 1050px;
+    max-height: 950px;
     min-height: 950px;
     min-width: 320px;
   }
@@ -68,42 +96,77 @@
   }
 
   .componentbody{
-    height: 85%;
+    height: 87%;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
   }
 
   .frameimage{
     height:115px;
   }
+
+  .marvfacewrapper{
+    top:-15px;
+  }
+
+  .marvface{
+    width:50px;
+  }
+
+  .download{
+    opacity: 1;
+    font-size: 14px;
+  }
+
 }
 
 @media screen and (min-width:501px) and (max-width:1024px) {
+
+  .componentbody{
+    row-gap: 50px;
+  }
+
   .title{
-    font-size: 60px;
-    height: 15%;
+    font-size: 55px;
+    height: 10%;
   }
 
   .mainwrapper{
-    max-height: 750px;
-    min-height: 700px;
+    max-height: 1500px;
+    min-height: 1500px;
   }
 
   .componentbody{
     height: 85%;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
   }
 
   .frameimage{
-    height:125px;
+    height:200px;
   }
+
+  .marvfacewrapper{
+    top:-40px;
+  }
+
+  .marvface{
+    width:75px;
+  }
+
+
+  .download{
+    opacity: 1;
+  }
+
+  /* .frame:hover .marvfacewrapper{
+    top:-50px
+  } */
 
 }
 
 @media screen and (min-width:1025px) {
   .title{
-    font-size: 130px;
+    font-size: 115px;
     height: 15%;
   }
 
@@ -113,7 +176,7 @@
 
   .mainwrapper{
     max-height: 1400px;
-    min-height: 1300px;
+    min-height: 1400px;
   }
 
   .componentbody{
@@ -124,5 +187,17 @@
 
   .frameimage{
     height:275px;
+  }
+
+  .marvfacewrapper{
+    top:20px;
+  }
+
+  .marvface{
+    width: 100px;
+  }
+
+  .frame:hover .marvfacewrapper{
+    top:-5px
   }
 }

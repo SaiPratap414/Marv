@@ -11,33 +11,48 @@ const Marvmemes: FunctionComponent<MarvmemesType> = ({ className = "" }) => {
   return (
     <section className={[styles.mainwrapper, className].join(" ")} id="marv-memes"  data-scroll-to="marv-memes">
       <div className={[styles.subwrapper, className].join(" ")}>
-        <div className={[styles.title, className].join(" ")}>MARVMEMES</div>
+        <div className={[styles.title, className].join(" ")}>MARV PFP GALLERY</div>
         <div className={[styles.componentbody, className].join(" ")}>
-          <Framecontainer className={className} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/1.png" rotation="2deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#F9B889, #926546)" image="/marvmemes/2.png" rotation="2deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#58A098, #69C6BA)" image="/marvmemes/3.png" rotation="-2deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/4.png" rotation="2deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/5.png" rotation="2deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#F9B889, #926546)" image="/marvmemes/6.png" rotation="-2deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#58A098, #69C6BA)" image="/marvmemes/7.png" rotation="2deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/8.png" rotation="-2deg"></Framecontainer>
-          <Framecontainer className={className} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/9.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={false} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/1.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={false}  color="linear-gradient(#F9B889, #926546)" image="/marvmemes/2.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={true} color="linear-gradient(#58A098, #69C6BA)" image="/marvmemes/3.png" rotation="-2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={false} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/4.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={false} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/5.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={true} color="linear-gradient(#F9B889, #926546)" image="/marvmemes/6.png" rotation="-2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={false} color="linear-gradient(#58A098, #69C6BA)" image="/marvmemes/7.png" rotation="2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={true} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/8.png" rotation="-2deg"></Framecontainer>
+          <Framecontainer className={className} marvmirror={false} color="linear-gradient(#AC9CDB, #7462A6)" image="/marvmemes/9.png" rotation="2deg"></Framecontainer>
         </div>
       </div>
     </section>
   );
 };
 
-const Framecontainer=(props:{className:string,image:string,rotation:string,color:string})=>{
+const Framecontainer=(props:{className:string,marvmirror:boolean,image:string,rotation:string,color:string})=>{
+
+  const download=()=>{
+
+  }
 
   return(
-    <div className={[styles.frame, props.className].join(" ")} style={{transform:"rotate("+props.rotation+")",borderTopLeftRadius:"10px",borderBottomRightRadius:"10px"}}>
+    <div className={[styles.frame, props.className].join(" ")} style={{borderTopLeftRadius:"10px",borderBottomRightRadius:"10px"}}>
+      {/* <div style={{position:"absolute",width:"100%",height:"100%",backgroundColor:"white",borderTopLeftRadius:"20px"}}></div> */}
       <img
-      className={[styles.frameimage, props.className].join(" ")}
+        className={[styles.frameimage, props.className].join(" ")}
         loading="lazy"
         alt=""
         src={props.image}
       />
+      <a className={[styles.marvfacewrapper, props.className].join(" ")} href={props.image} download={"Marv"}>
+        <p className={styles.download}>Download?</p>
+        <img
+          className={styles.marvface}
+          loading="lazy"
+          alt=""
+          src="/marv-face2.png"
+          // style={{transform:"scaleX("+(props.marvmirror?-1:1)+")"}}
+        />
+      </a>
       {/* <div style={{height:"85%",width:"100%",display:"flex",flexDirection:"column",justifyContent:"start",alignItems:"center"}}>
         <p className={[styles.frametitle, props.className].join(" ")}>{props.title}</p>
         <p className={[styles.framesubtitle, props.className].join(" ")}>{props.subTitle}</p>

@@ -93,12 +93,12 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
         }
         <div className={[styles.titlecontainer, className].join(" ")}>
           <div className={[styles.title, className].join(" ")}  style={{position:"relative"}}>
-            <img
+            {/* <img
               className={[styles.hoverimg, className].join(" ")}
               loading="lazy"
               alt=""
               src={"/road-map0008@2x.png"}
-            />
+            /> */}
             <div className={[styles.M, className].join(" ")}>M</div>
             <div className={[styles.A, className].join(" ")}>A</div>
             <div className={[styles.R, className].join(" ")}>R</div>
