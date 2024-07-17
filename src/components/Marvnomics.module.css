@@ -242,15 +242,15 @@
     }
 
     .marv_beach{
-      top: 75px;
-      width: 200px;
-      left: -50px;
+      top: 130px;
+      width: 180px;
+      left: 10px;
     }
 
     .marv_pool{
       top: 20px;
-      width: 190px;
-      right: -50px;
+      width: 160px;
+      right: 10px;
     }
 
 }
