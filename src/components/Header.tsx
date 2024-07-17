@@ -24,6 +24,8 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
     {name:"Marvmemes",id:"marv-memes"}
   ]).current
 
+  const socialIcons=useRef(["/telegram.png","/twitter.png","/dex.png"]).current
+
   useEffect(()=>{
     window.addEventListener("resize",()=>{
       layout!="mobile"?setNavbarHeight("0%"):null
@@ -60,6 +62,8 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
     }
   }
 
+  //console.log(layout)
+
   return (
     <section className={[styles.header, className].join(" ")} id="header" data-scroll-to="header">
       <div  className={[styles.headerwrapper, className].join(" ")}>
@@ -81,26 +85,38 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
           </div>
           :
           <div className={[styles.navbar, className].join(" ")}>
-            <div style={{width:"75%",height:"75%",backgroundColor:"rgba(0, 0, 0, 0.25)"}}>
-              <div style={{display:"flex",flexDirection:"row",gap:"15px"}}>
+            <div className={[styles.navwrapper,className].join(" ")}>
+              <div className={[styles.navoptionswrapper,className].join(" ")}>
               {
                 navOptions.map((navItem)=>
-                <a onClick={()=>handleNavClick(navItem.id)}>{navItem.name}</a>
+                <a className={[styles.navitem,className].join(" ")} onClick={()=>handleNavClick(navItem.id)}>{navItem.name}</a>
                 )
               }
               </div>
+              <div className={[styles.socialwrapper,className].join(" ")}>
+                <div style={{display:"flex",flexDirection:"row",gap:"10px"}}>
+                {
+                  socialIcons.map((src)=>
+                  <img
+                    className={[styles.socialicons, className].join(" ")}
+                    loading="lazy"
+                    alt=""
+                    src={src}
+                  />
+                  )
+                }
+                </div>
+                <div className={[styles.buynowwrapper, className].join(" ")}>
+                  <button className={styles.buynowbutton} style={{padding:"5px 15px"}}>
+                    <div className={styles.navbarbuynow}>Buy Now</div>
+                  </button>
+                </div>
+              </div>
             </div>
-            {/* <div>options</div> */}
           </div>
         }
         <div className={[styles.titlecontainer, className].join(" ")}>
           <div className={[styles.title, className].join(" ")}  style={{position:"relative"}}>
-            {/* <img
-              className={[styles.hoverimg, className].join(" ")}
-              loading="lazy"
-              alt=""
-              src={"/road-map0008@2x.png"}
-            /> */}
             <div className={[styles.M, className].join(" ")}>M</div>
             <div className={[styles.A, className].join(" ")}>A</div>
             <div className={[styles.R, className].join(" ")}>R</div>
@@ -122,7 +138,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             className={styles.bg}
             loading="lazy"
             alt=""
-            src={layout=="mobile"?"/HomeBgMobile.png":(layout=="tab"?"/HomeBgIpad.png":"/HomeBgLaptop.gif")}
+            src={layout=="mobile"?"/HomeBgMobile.png":(layout=="tab"?"/HomeBgIpad.gif":"/HomeBgLaptop.gif")}
           />
         </div>
       </div>
