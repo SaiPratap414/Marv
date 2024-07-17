@@ -11,6 +11,18 @@ const Marvmemes: FunctionComponent<MarvmemesType> = ({ className = "" }) => {
   return (
     <section className={[styles.mainwrapper, className].join(" ")} id="marv-memes"  data-scroll-to="marv-memes">
       <div className={[styles.subwrapper, className].join(" ")}>
+        <img
+          className={[styles.marv_posing, className].join(" ")}
+          loading="lazy"
+          alt=""
+          src={"/marv-posing.gif"}
+        />
+        <img
+          className={[styles.marv_cameraman, className].join(" ")}
+          loading="lazy"
+          alt=""
+          src={"/marv-cameraman.gif"}
+        />
         <div className={[styles.title, className].join(" ")}>MARV PFP GALLERY</div>
         <div className={[styles.componentbody, className].join(" ")}>
           <Framecontainer className={className} marvmirror={false} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/1.png" rotation="2deg"></Framecontainer>
@@ -44,7 +56,7 @@ const Framecontainer=(props:{className:string,marvmirror:boolean,image:string,ro
         src={props.image}
       />
       <a className={[styles.marvfacewrapper, props.className].join(" ")} href={props.image} download={"Marv"}>
-        <p className={styles.download}>Download?</p>
+        <p className={styles.download}>Download</p>
         <img
           className={styles.marvface}
           loading="lazy"

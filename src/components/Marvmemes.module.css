@@ -16,6 +16,7 @@
   align-items: center;
   /* padding: 10px 20px; */
   position: relative;
+  overflow: hidden;
 }
 
 .title{
@@ -79,6 +80,11 @@
   opacity: 1;
 }
 
+.marv_posing,.marv_cameraman{
+  height: auto;
+  position: absolute;
+}
+
 @media screen and (max-width:500px) {
   .title{
     font-size: 40px;
@@ -115,6 +121,10 @@
   .download{
     opacity: 1;
     font-size: 14px;
+  }
+
+  .marv_posing,.marv_cameraman{
+    display: none;
   }
 
 }
@@ -158,9 +168,17 @@
     opacity: 1;
   }
 
-  /* .frame:hover .marvfacewrapper{
-    top:-50px
-  } */
+  .marv_posing{
+    top: 20px;
+    width: 150px;
+    left: -10px;
+  }
+
+  .marv_cameraman{
+    top: 20px;
+    width: 130px;
+    right: 10px;
+  }
 
 }
 
@@ -199,5 +217,17 @@
 
   .frame:hover .marvfacewrapper{
     top:-5px
+  }
+
+  .marv_posing{
+    top: 20px;
+    width: 180px;
+    left: -10px;
+  }
+
+  .marv_cameraman{
+    top: 20px;
+    width: 160px;
+    right: 10px;
   }
 }

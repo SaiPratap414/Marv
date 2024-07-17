@@ -28,10 +28,10 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
             src={"/marv-pool.png"}
           />
           <div className={[styles.framescontainer, className].join(" ")}>
-            <Framecontainer className={className} image={"/marv-web-new-set0005@2x.png"} title="Taxes" subTitle="0/0" border="linear-gradient(to right, #FF8B8B 0%, #AA5959 100%) 1"></Framecontainer>
-            <Framecontainer className={className} image={"/marv-web-new-set0003@2x.png"} title="Freeze & Mint" subTitle="Revoke" border="linear-gradient(to right, #FAB989 0%, #9F7557 100%) 1"></Framecontainer>
-            <Framecontainer className={className} image={"/marv-web-new-set0002@2x.png"} title="Total Supply" subTitle="100M" border="linear-gradient(to right, #579E96 0%, #8AFBED 100%) 1"></Framecontainer>
-            <Framecontainer className={className} image={"/marv-web-new-set0004@2x.png"} title="Liquidity" subTitle="Burned" border="linear-gradient(to right, #897CB0 0%, #C0AEF6 100%) 1"></Framecontainer>
+            <Framecontainer className={className} image={"/marv-web-new-set0005@2x.png"} title="Taxes" subTitle="0/0" border="linear-gradient(#FF8B8B, #AA5959)"></Framecontainer>
+            <Framecontainer className={className} image={"/marv-web-new-set0003@2x.png"} title="Freeze & Mint" subTitle="Revoke" border="linear-gradient(#FAB989, #9F7557)"></Framecontainer>
+            <Framecontainer className={className} image={"/marv-web-new-set0002@2x.png"} title="Total Supply" subTitle="100M" border="linear-gradient(#579E96, #8AFBED)"></Framecontainer>
+            <Framecontainer className={className} image={"/marv-web-new-set0004@2x.png"} title="Liquidity" subTitle="Burned" border="linear-gradient(#897CB0, #C0AEF6)"></Framecontainer>
           </div>
           <div className={[styles.description, className].join(" ")}>
             <p style={{margin:"10px"}}>
@@ -52,7 +52,7 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
 const Framecontainer=(props:{className:string,image:string,title:string,subTitle:string,border:string})=>{
 
   return(
-    <div className={[styles.framewrapper, props.className].join(" ")} style={{borderImage:props.border}}>
+    <div className={[styles.framewrapper, props.className].join(" ")} style={{backgroundImage:props.border}}>
       <div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center"}}>
         <img
           className={[styles.frameimage, props.className].join(" ")}

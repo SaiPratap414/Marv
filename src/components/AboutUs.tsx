@@ -15,7 +15,7 @@ const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
   return (
     <section className={[styles.mainwrapper, className].join(" ")} id="aboutus" data-scroll-to="about-us">
       <div className={[styles.subwrapper, className].join(" ")}>
-        <img
+        {/* <img
           className={[styles.cloud1, className].join(" ")}
           loading="lazy"
           alt=""
@@ -25,7 +25,7 @@ const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
           className={[styles.marv1, className].join(" ")}
           loading="lazy"
           alt=""
-          src={"/marv0005@2x.png"}
+          src={"/marv-king.gif"}
         />
         <img
           className={[styles.cloud2, className].join(" ")}
@@ -37,9 +37,19 @@ const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
           className={[styles.marv2, className].join(" ")}
           loading="lazy"
           alt=""
-          src={"/marv0005@2x.png"}
-        />
-        <div className={[styles.title, className].join(" ")}>KING</div>
+          src={"/marv-king.gif"}
+        /> */}
+        <div className={[styles.title, className].join(" ")}>
+          <div>K</div>
+            <img
+            className={[styles.marv1, className].join(" ")}
+            loading="lazy"
+            alt=""
+            src={"/marv-king.gif"}
+          />
+          <div>N</div>
+          <div>G</div>
+        </div>
         <div className={[styles.subtitle, className].join(" ")}><p style={{margin: "10px"}}>A new king has risen!</p></div>
         <div className={[styles.description, className].join(" ")}>
           <p>

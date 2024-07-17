@@ -1,5 +1,3 @@
-/* @import url("../misc/appdata.js"); */
-
 .header{
   width:100vw;
   height: 100vh;
@@ -10,6 +8,7 @@
 }
 
 .headerwrapper{
+  margin-top: 10px;
   width:100%;
   height:100%;
   display: flex;
@@ -23,7 +22,7 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-  height: 10%;
+  height: 7.5%;
   font-family: var(--font-bangers);
   color: white;
   box-sizing: border-box;
@@ -146,7 +145,7 @@
 }
 
 .navitem{
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .navbarbuynow{
@@ -197,7 +196,6 @@
 
   .headerwrapper{
     min-width: 320px;
-    /* background-image: url(../../public/HomeBgMobile.png); */
   }
 
   .subtitle{
@@ -219,7 +217,7 @@
   }
 
   .titlecontainer{
-    height: 40%;
+    height: 50%;
   }
 
   .bgwrapper{
@@ -238,7 +236,6 @@
 
   .headerwrapper{
     min-width: 320px;
-    /* background-image: url(../../public/HomeBgMobile.png); */
   }
 
   .subtitle{
@@ -268,85 +265,10 @@
   }
 }
 
-@media screen and (min-width:1025px) and (max-width:1900px) {
+@media screen and (min-width:1025px) {
 
   .title{
     font-size: 240px;
-    /* height: 50%; */
-  }
-
-  .titlecontainer{
-    height: 60%;
-  }
-
-  .bgwrapper{
-    height:30%;
-  }
-
-  .buynowtext{
-    font-size: 40px;
-  }
-
-  .header{
-    max-height: 1200px;
-    min-height: 1100px;
-  }
-
-  .headerwrapper{
-    /* max-width: 1900px; */
-    /* background-image: url(../../public/HomeBgLaptop.png); */
-  }
-
-  .subtitle{
-    font-size:28px;
-    max-width:700px;
-  }
-
-  .navbar{
-    font-size: 28px;
-  }
-
-  /* .title:hover .hoverimg{
-    top: -54%;
-    opacity: 1;
-    transform: rotate(293deg) translateY(-50%);
-    transition: opacity 0.25s, bottom 0.25s;
-  }
-  
-  .title:hover .M{
-    transform:rotate(271deg) translate(0px, 0px)
-  }
-  
-  .title:hover .A{
-    transform:rotate(179deg) translate(0px, 4px)
-  }
-  
-  .title:hover .R{
-    transform:rotate(89deg) translate(-27px, -20px)
-  }
-  
-  .title:hover .V{
-    transform:rotate(178deg) translate(-20px, 17px)
-  } */
-
-  .navoptionswrapper{
-    width: 70%;
-  }
-
-  .socialwrapper{
-    width: 30%;
-  }
-
-  .navwrapper{
-    width:80%;
-  }
-}
-
-@media screen and (min-width:1901px) {
-
-  .title{
-    font-size: 240px;
-    /* height: 50%; */
   }
 
   .titlecontainer{
@@ -368,7 +290,6 @@
 
   .headerwrapper{
     max-width: 2200px;
-    /* background-image: url(../../public/HomeBgLaptop.png); */
   }
 
   .subtitle{
@@ -378,6 +299,18 @@
 
   .navbar{
     font-size: 30px;
+  }
+
+  .navoptionswrapper{
+    width: 70%;
+  }
+
+  .socialwrapper{
+    width: 30%;
+  }
+
+  .navwrapper{
+    width:85%;
   }
 
   .title:hover .hoverimg{
@@ -402,46 +335,4 @@
   .title:hover .V{
     transform:rotate(178deg) translate(-20px, 17px)
   }
-
-  .navoptionswrapper{
-    width: 70%;
-  }
-
-  .socialwrapper{
-    width: 30%;
-  }
-
-  .navwrapper{
-    width:80%;
-  }
 }
-
-/* .header {
-  background-color: var(--color-darkslateblue);
-  border-bottom: 3px solid var(--polaonbasecom-black);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-51xl) var(--padding-xl) var(--padding-8xs);
-  gap: var(--gap-75xl);
-  text-align: center;
-  font-size: var(--font-size-201xl);
-  color: var(--polaonbasecom-black);
-  font-family: var(--font-pure-joy);
-  max-width: 100%;
-} */
-/* @media screen and (max-width: 1200px) {
-  .header {
-    gap: var(--gap-28xl);
-    padding-top: var(--padding-26xl);
-    padding-bottom: var(--padding-xl);
-    box-sizing: border-box;
-  }
-}
-@media screen and (max-width: 450px) {
-  .header {
-    gap: var(--gap-4xl);
-  }
-} */

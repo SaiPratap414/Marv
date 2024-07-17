@@ -138,7 +138,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             className={styles.bg}
             loading="lazy"
             alt=""
-            src={layout=="mobile"?"/HomeBgMobile.png":(layout=="tab"?"/HomeBgIpad.gif":"/HomeBgLaptop.gif")}
+            src={layout=="mobile"?"/HomeBgMobile.gif":(layout=="tab"?"/HomeBgIpad.gif":"/HomeBgLaptop.gif")}
           />
         </div>
       </div>
