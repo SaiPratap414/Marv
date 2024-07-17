@@ -16,6 +16,18 @@ const Howtobuy: FunctionComponent<HowtobuyType> = ({ className = "" }) => {
   return (
     <section className={[styles.mainwrapper, className].join(" ")} id="how-to-buy" data-scroll-to="how-to-buy">
       <div className={[styles.subwrapper, className].join(" ")}>
+        <img
+          className={[styles.marvimagetop, className].join(" ")}
+          loading="lazy"
+          alt=""
+          src="/marv-whiteborder.png"
+        />
+        <img
+          className={[styles.marvimagebottom, className].join(" ")}
+          loading="lazy"
+          alt=""
+          src="/marv-whiteborder.png"
+        />
         <div className={[styles.title, className].join(" ")}>How To Buy</div>
         <div className={[styles.componentbody, className].join(" ")}>
           <Framecontainer className={className} color="linear-gradient(#FD8A8A, #AD5B5B)" footerimage="/how-to-buy/1.png" image="/buy1-1@2x.png" title="Download Phantom Extension" subTitle="Download and install ​phantom on the ​appstore, or,​alternatively if ​you’re on desktop ​download and install ​thebrowser ​extension."></Framecontainer>
@@ -42,14 +54,14 @@ const Framecontainer=(props:{className:string,footerimage:string,image:string,ti
         <p className={[styles.frametitle, props.className].join(" ")}>{props.title}</p>
         <p className={[styles.framesubtitle, props.className].join(" ")}>{props.subTitle}</p>
       </div>
-      <div className={[styles.framefooter, props.className].join(" ")}>
+      {/* <div className={[styles.framefooter, props.className].join(" ")}>
         <img
           style={{width:"auto",height:"100%",alignSelf:"center"}}
           loading="lazy"
           alt=""
           src={props.footerimage}
         />
-      </div>
+      </div> */}
     </div>
   )
 }
