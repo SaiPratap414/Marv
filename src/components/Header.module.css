@@ -94,6 +94,38 @@
 
 }
 
+.hoverimg{
+  width: auto;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  opacity: 0;
+  transition: opacity 0.25s, top 0.25s;
+}
+
+.M,.A,.R,.V{
+  color:white;
+  text-shadow:0px 10px black;
+  transition: transform 0.25s;
+}
+
+.M{
+  transform:rotate(-6deg) translate(0px, 5px);
+}
+
+.A{
+  transform:rotate(356deg) translate(0px, -3px);
+}
+
+.R{
+  transform:rotate(1deg) translate(0px, 0px);
+}
+
+.V{
+  transform:rotate(4deg) translate(0px, 5px);
+}
+
 @media screen and (max-width:500px) {
 
   .title{
@@ -210,6 +242,29 @@
 
   .navbar{
     font-size: 28px;
+  }
+
+  .title:hover .hoverimg{
+    top: -54%;
+    opacity: 1;
+    transform: rotate(293deg) translateY(-50%);
+    transition: opacity 0.25s, bottom 0.25s;
+  }
+  
+  .title:hover .M{
+    transform:rotate(271deg) translate(0px, 0px)
+  }
+  
+  .title:hover .A{
+    transform:rotate(179deg) translate(0px, 4px)
+  }
+  
+  .title:hover .R{
+    transform:rotate(89deg) translate(-27px, -20px)
+  }
+  
+  .title:hover .V{
+    transform:rotate(178deg) translate(-20px, 17px)
   }
 }
 

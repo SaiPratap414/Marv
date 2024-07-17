@@ -92,11 +92,17 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
           </div>
         }
         <div className={[styles.titlecontainer, className].join(" ")}>
-          <div className={[styles.title, className].join(" ")}>
-            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(-6deg) translate(0px, 5px)"}}>M</div>
-            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(356deg) translate(0px, -3px)"}}>A</div>
-            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(1deg) translate(0px, 0px)"}}>R</div>
-            <div style={{color:"white",textShadow:"0px 10px black",transform:"rotate(4deg) translate(0px, 5px)"}}>V</div>
+          <div className={[styles.title, className].join(" ")}  style={{position:"relative"}}>
+            <img
+              className={[styles.hoverimg, className].join(" ")}
+              loading="lazy"
+              alt=""
+              src={"/road-map0008@2x.png"}
+            />
+            <div className={[styles.M, className].join(" ")}>M</div>
+            <div className={[styles.A, className].join(" ")}>A</div>
+            <div className={[styles.R, className].join(" ")}>R</div>
+            <div className={[styles.V, className].join(" ")}>V</div>
           </div>
           <p className={styles.subtitle}>
             Marv is a slightly racist, shy frog who loves to dress
@@ -114,7 +120,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             className={styles.bg}
             loading="lazy"
             alt=""
-            src={layout=="mobile"?"/HomeBgMobile.png":(layout=="tab"?"/HomeBgIpad.png":"/HomeBgLaptop.png")}
+            src={layout=="mobile"?"/HomeBgMobile.png":(layout=="tab"?"/HomeBgIpad.png":"/HomeBgLaptop.gif")}
           />
         </div>
       </div>
