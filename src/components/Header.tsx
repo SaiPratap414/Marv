@@ -17,11 +17,11 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
   const [navbarScale,setNavbarScale]=useState(0);
   const navOptions=useRef([
     {name:"Home",id:"header"},
-    {name:"About Us",id:"about-us"},
+    {name:"About",id:"about-us"},
     {name:"Roadmap",id:"roadmap"},
     {name:"Marvnomics",id:"marvnomics"},
     {name:"How To Buy",id:"how-to-buy"},
-    {name:"Marv PFP Gallery",id:"marv-memes"}
+    {name:"Marv Gallery",id:"marv-memes"}
   ]).current
 
   const socialIcons=useRef(["/telegram.png","/twitter.png","/dex.png"]).current
@@ -123,12 +123,36 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
                 className={[styles.marv_m, className].join(" ")}
                 loading="lazy"
                 alt=""
-                src="/marv-m.png"
+                src="/letters/m.png"
               />
             </div>
-            <div className={[styles.A, className].join(" ")}>A</div>
-            <div className={[styles.R, className].join(" ")}>R</div>
-            <div className={[styles.V, className].join(" ")}>V</div>
+            <div className={[styles.A, className].join(" ")}>
+              A
+              <img
+                className={[styles.marv_a, className].join(" ")}
+                loading="lazy"
+                alt=""
+                src="/letters/a.png"
+              />
+            </div>
+            <div className={[styles.R, className].join(" ")}>
+              R
+            <img
+                className={[styles.marv_r, className].join(" ")}
+                loading="lazy"
+                alt=""
+                src="/letters/r.png"
+              />
+            </div>
+            <div className={[styles.V, className].join(" ")}>
+              V
+              <img
+                className={[styles.marv_v, className].join(" ")}
+                loading="lazy"
+                alt=""
+                src="/letters/v.png"
+              />
+            </div>
           </div>
           <p className={styles.subtitle}>
             Marv is a slightly racist, shy frog who loves to dress
