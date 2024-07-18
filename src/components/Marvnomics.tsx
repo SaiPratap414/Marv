@@ -35,14 +35,10 @@ const Marvnomics: FunctionComponent<MarvnomicsType> = ({ className = "" }) => {
           </div>
           <div className={[styles.description, className].join(" ")}>
             <p style={{margin:"10px"}}>
-              Marv's journey in the Solana world is a testament to his unique
-              approach to leadership. He continues to engage with his community,
-              embracing their support and feedback. His dedication to
-              decentralization and community growth remains at the heart of his
-              reign, inspiring others to join him in creating a vibrant and
-              inclusive ecosystem.
+            Marv's is unhinged, unbelievably classy and fun loving. He is the true testament for Solana. He doesn’t shy away in engaging with his community in his own slightly racist and socially awkward way. He loves decentralization because that’s how he got his first lambo, benefiting from the wild west of crypto.
             </p>
-          </div>
+            <p style={{fontFamily:"var(--font-bangers)",alignSelf:"start",margin:"5px",color:"#FCFAC2"}}>Vroom Vroom . . . . . . . . . . . . . . . . . . . . . . .</p>
+          </div> 
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@ const Marvmemes: FunctionComponent<MarvmemesType> = ({ className = "" }) => {
           alt=""
           src={"/marv-cameraman.gif"}
         />
-        <div className={[styles.title, className].join(" ")}>MARV PFP GALLERY</div>
+        <div className={[styles.title, className].join(" ")}>GALLERY</div>
         <div className={[styles.componentbody, className].join(" ")}>
           <Framecontainer className={className} marvmirror={false} color="linear-gradient(#FD8A8A, #AD5B5B)" image="/marvmemes/1.png" rotation="2deg"></Framecontainer>
           <Framecontainer className={className} marvmirror={false}  color="linear-gradient(#F9B889, #926546)" image="/marvmemes/2.png" rotation="2deg"></Framecontainer>

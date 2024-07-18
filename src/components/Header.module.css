@@ -252,6 +252,10 @@
     font-size: 16px;
     justify-content: left
   }
+
+  .marv_a,.marv_m,.marv_r,.marv_v{
+    display: none;
+  }
 }
 
 @media screen and (min-width:501px) and (max-width:1024px){
@@ -307,6 +311,10 @@
 
   .navitem{
     font-size:16px;
+  }
+
+  .marv_a,.marv_m,.marv_r,.marv_v{
+    display: none;
   }
 }
 

@@ -18,10 +18,10 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
   const navOptions=useRef([
     {name:"Home",id:"header"},
     {name:"About",id:"about-us"},
-    {name:"Roadmap",id:"roadmap"},
+    // {name:"Roadmap",id:"roadmap"},
     {name:"Marvnomics",id:"marvnomics"},
     {name:"How To Buy",id:"how-to-buy"},
-    {name:"Marv Gallery",id:"marv-memes"}
+    {name:"Gallery",id:"marv-memes"}
   ]).current
 
   const socialIcons=useRef(["/telegram.png","/twitter.png","/dex.png"]).current
@@ -61,8 +61,6 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
       setTimeout(()=>setNavbarScale(0),300)
     }
   }
-
-  //console.log(layout)
 
   return (
     <section className={[styles.header, className].join(" ")} id="header" data-scroll-to="header">
@@ -155,9 +153,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             </div>
           </div>
           <p className={styles.subtitle}>
-            Marv is a slightly racist, shy frog who loves to dress
-            up.In the world of Solana, Marv has become a unique
-            and influential figure.
+            Your favorite little racist frog(slightly). Here on his lambo to teach you the degen way
           </p>
           <div className={[styles.buynowwrapper, className].join(" ")}>
             <button className={styles.buynowbutton}>

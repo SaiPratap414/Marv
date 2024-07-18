@@ -22,10 +22,10 @@ const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
           src={"/cloud.png"}
         />
         <img
-          className={[styles.marv1, className].join(" ")}
+          className={[styles.marv2, className].join(" ")}
           loading="lazy"
           alt=""
-          src={"/marv-cowboy.png"}
+          src={"/marv-king.png"}
         />
         <img
           className={[styles.cloud2, className].join(" ")}
@@ -34,37 +34,46 @@ const AboutUs: FunctionComponent<AboutUsType> = ({ className = "" }) => {
           src={"/cloud.png"}
         />
         <img
-          className={[styles.marv2, className].join(" ")}
+          className={[styles.marv1, className].join(" ")}
           loading="lazy"
           alt=""
-          src={"/marv-cowboy.png"}
+          src={"/marv-king.png"}
         />
         <div className={[styles.title, className].join(" ")}>
           KING
-          {/* <div>K</div>
-            <img
-            className={[styles.marv1, className].join(" ")}
+          {/* <img
+            className={[styles.marvking, className].join(" ")}
             loading="lazy"
             alt=""
-            src={"/marv-king.gif"}
-          />
+            src={"/marv-king.png"}
+          /> */}
+          {/* <div>K</div>
+            
           <div>N</div>
           <div>G</div>*/}
         </div> 
-        <div className={[styles.subtitle, className].join(" ")}><p style={{margin: "10px"}}>A new king has risen!</p></div>
+        <div className={[styles.subtitle, className].join(" ")}><p style={{margin:"10px"}}>A new king has risen!</p></div>
         <div className={[styles.description, className].join(" ")}>
-          <p>
-            Marv, a frog with a distinct personality, stands out in the Solana
-            ecosystem. He’s slightly racist, a trait that sometimes leads to
-            awkward social interactions. His shyness makes him a reserved
-            figure, often observing more than participating. However, Marv's
-            love for dressing up adds a flair to his character, making him a
-            stylish and memorable ruler.Despite his quirks, Marv has risen to 
-            prominence in Solana,where he rules with a gentle touch and a keen sense of
-            fashion. His approach to leadership combines his shy nature
-            with an undeniable charisma, creating a balance that resonates
-            with his community.
-          </p>
+          <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+            {/* <p style={{fontFamily:"var(--font-bangers)"}}>Origin Story</p> */}
+            <p className={[styles.para, className].join(" ")}>
+              Marv grew up in the shadow of his famous cousin Pepe. While Pepe's image evolved and became more mainstream, Marv doubled down on his edgy internet persona. Feeling fed up with Pepe's "gentrification by wokes", Marv found his niche in Solana. He's slightly racist, socially awkward and shy. However, Marv's love for cosplaying adds a flair to his character, making him a stylish and memorable ruler.
+              As Pepe became adopted by a wider audience, Marv saw an opportunity to become the face of the degen community. He embraced Solana, seeing it as a refuge from political correctness. Marv's antics blur the line between genuine degeneracy and performance art. Masking his insecurities behind layers of fabric and face paint.
+            </p>
+          </div>
+          {/* <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+            <p style={{fontFamily:"var(--font-bangers)"}}>What makes Marv attractive</p>
+            <p className={[styles.para, className].join(" ")}>
+            1. Marv sees himself as maintaining the original spirit of internet meme culture<br></br>
+            2. Contrast with Pepe's mainstream evolution<br></br>
+            3. Embodiment of degen culture<br></br>
+            4. Insecurity masked by over-the-top online behavior<br></br>
+            5. Considers racism a performance art<br></br>
+            6. Extensive wardrobe of outrageous outfits and cosplays<br></br>
+            7. Marv represents the more provocative side of crypto culture<br></br>
+            8. Embraces being an outsider and revels in his non-mainstream status<br></br>
+            </p>
+          </div> */}
         </div>
       </div>
     </section>
