@@ -45,26 +45,33 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
             <div style={{width:"33%",gap:"3%",display:"flex",flexDirection:"column"}}>
               <div className={[styles.marvtext, className].join(" ")}>MARV</div>
               <div className={[styles.jointext, className].join(" ")}>Join the Marv at Marv Army</div>
-              <div style={{display:"flex",flexDirection:"row",gap:"5%"}}>
-                <img
-                  className={[styles.socialicons, className].join(" ")}
-                  loading="lazy"
-                  alt=""
-                  src="/twitter.png"
-                />
-                  <img
-                  className={[styles.socialicons, className].join(" ")}
-                  loading="lazy"
-                  alt=""
-                  src="/telegram.png"
-                />
-                  <img
-                  className={[styles.socialicons, className].join(" ")}
-                  loading="lazy"
-                  alt=""
-                  src="/dex.png"
-                />
-              </div>
+              <div style={{ display: "flex", flexDirection: "row", gap: "5%" }}>
+  <a href="https://x.com/Realmarv_Sol" target="_blank" rel="noopener noreferrer">
+    <img
+      className={[styles.socialicons, className].join(" ")}
+      loading="lazy"
+      alt="Twitter"
+      src="/twitter.png"
+    />
+  </a>
+  <a href="https://t.me/realmarv_sol" target="_blank" rel="noopener noreferrer">
+    <img
+      className={[styles.socialicons, className].join(" ")}
+      loading="lazy"
+      alt="Telegram"
+      src="/telegram.png"
+    />
+  </a>
+  <a href="#" target="_blank" rel="noopener noreferrer">
+    <img
+      className={[styles.socialicons, className].join(" ")}
+      loading="lazy"
+      alt="Dex"
+      src="/dex.png"
+    />
+  </a>
+</div>
+
             </div>
             {/* <div style={{width:"33%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
               <div className={[styles.metricstitle, className].join(" ")}>Metrics</div>

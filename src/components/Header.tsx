@@ -12,27 +12,31 @@ export type HeaderType = {
 
 const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
 
-  const [layout,setLayout]=useState<"web"|"mobile"|"tab"|"pc"|"laptop">(getLayout())
-  const [navbarHeight,setNavbarHeight]=useState("0%");
-  const [navbarScale,setNavbarScale]=useState(0);
-  const navOptions=useRef([
-    {name:"Home",id:"header"},
-    {name:"About",id:"about-us"},
-    // {name:"Roadmap",id:"roadmap"},
-    {name:"Marvnomics",id:"marvnomics"},
-    {name:"How To Buy",id:"how-to-buy"},
-    {name:"Gallery",id:"marv-memes"}
-  ]).current
+  const [layout, setLayout] = useState<"web"|"mobile"|"tab"|"pc"|"laptop">(getLayout());
+  const [navbarHeight, setNavbarHeight] = useState("0%");
+  const [navbarScale, setNavbarScale] = useState(0);
+  const navOptions = useRef([
+    {name: "Home", id: "header"},
+    {name: "About", id: "about-us"},
+    // {name: "Roadmap", id: "roadmap"},
+    {name: "Marvnomics", id: "marvnomics"},
+    {name: "How To Buy", id: "how-to-buy"},
+    {name: "Gallery", id: "marv-memes"}
+  ]).current;
 
-  const socialIcons=useRef(["/telegram.png","/twitter.png","/dex.png"]).current
+  const socialIcons = useRef([
+    { src: "/telegram.png", link: "https://t.me/realmarv_sol" },
+    { src: "/twitter.png", link: "https://x.com/Realmarv_Sol" },
+    { src: "/dex.png", link: "#" }
+  ]).current;
 
-  useEffect(()=>{
-    window.addEventListener("resize",()=>{
-      layout!="mobile"?setNavbarHeight("0%"):null
-      setLayout(getLayout())
-    })
-    setNavbarHeight("0%")
-  },[])
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      layout !== "mobile" ? setNavbarHeight("0%") : null;
+      setLayout(getLayout());
+    });
+    setNavbarHeight("0%");
+  }, []);
 
   const scrollToSection = useCallback((sectionId: string) => {
     console.log("Scrolling to section:", sectionId);
@@ -50,71 +54,72 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
     scrollToSection(sectionId);
   };
 
-  const navHandler=(action:"open"|"close")=>{
-    if(action=="open")
-    {
+  const navHandler = (action: "open" | "close") => {
+    if (action === "open") {
       setNavbarScale(1);
-      setNavbarHeight("50%")
+      setNavbarHeight("50%");
     }
-    if(action=="close"){
+    if (action === "close") {
       setNavbarHeight("0%");
-      setTimeout(()=>setNavbarScale(0),300)
+      setTimeout(() => setNavbarScale(0), 300);
     }
-  }
+  };
 
   return (
     <section className={[styles.header, className].join(" ")} id="header" data-scroll-to="header">
-      <div  className={[styles.headerwrapper, className].join(" ")}>
-        <div className={[styles.navOptions, className].join(" ")} style={{transform:"scaleY("+navbarScale+")",height:navbarHeight,zIndex:1}}>
-          <div style={{width:"100%",height:"10%",display:"flex",justifyContent:"end"}}><button onClick={()=>navHandler("close")} style={{alignSelf:"end",height:"100%",margin:"none",border:"none",backgroundColor:"transparent"}}><img style={{height:"100%",width:"auto"}} src="/close.png"></img></button></div>
-          <div style={{width:"100%",height:"85%",display:"flex",flexDirection:"column",alignItems:"start",justifyContent:"center",gap:"5%",fontFamily:"var(--font-bangers)",color:"#0353B2"}}>
-          {
-            navOptions.map((navItem)=>
-            <a onClick={()=>{handleNavClick(navItem.id);navHandler("close")}}>{navItem.name}</a>
-            )
-          }
+      <div className={[styles.headerwrapper, className].join(" ")}>
+        <div className={[styles.navOptions, className].join(" ")} style={{ transform: "scaleY(" + navbarScale + ")", height: navbarHeight, zIndex: 1 }}>
+          <div style={{ width: "100%", height: "10%", display: "flex", justifyContent: "end" }}>
+            <button onClick={() => navHandler("close")} style={{ alignSelf: "end", height: "100%", margin: "none", border: "none", backgroundColor: "transparent" }}>
+              <img style={{ height: "100%", width: "auto" }} src="/close.png" alt="Close" />
+            </button>
+          </div>
+          <div style={{ width: "100%", height: "85%", display: "flex", flexDirection: "column", alignItems: "start", justifyContent: "center", gap: "5%", fontFamily: "var(--font-bangers)", color: "#0353B2" }}>
+            {navOptions.map((navItem) => (
+              <a key={navItem.id} onClick={() => { handleNavClick(navItem.id); navHandler("close"); }}>{navItem.name}</a>
+            ))}
           </div>
         </div>
-        {
-          layout=="mobile"
-          ?
+        {layout === "mobile" ? (
           <div className={[styles.navbar, className].join(" ")}>
-              <div style={{width:"50%"}}><button onClick={()=>navHandler("open")} style={{alignSelf:"end",border:"none",margin:"none",backgroundColor:"transparent"}}><img style={{height:"24px",width:"auto"}} src="/menu.png"></img></button></div>
+            <div style={{ width: "50%" }}>
+              <button onClick={() => navHandler("open")} style={{ alignSelf: "end", border: "none", margin: "none", backgroundColor: "transparent" }}>
+                <img style={{ height: "24px", width: "auto" }} src="/menu.png" alt="Menu" />
+              </button>
+            </div>
           </div>
-          :
+        ) : (
           <div className={[styles.navbar, className].join(" ")}>
-            <div className={[styles.navwrapper,className].join(" ")}>
-              <div className={[styles.navoptionswrapper,className].join(" ")}>
-              {
-                navOptions.map((navItem)=>
-                <a className={[styles.navitem,className].join(" ")} onClick={()=>handleNavClick(navItem.id)}>{navItem.name}</a>
-                )
-              }
+            <div className={[styles.navwrapper, className].join(" ")}>
+              <div className={[styles.navoptionswrapper, className].join(" ")}>
+                {navOptions.map((navItem) => (
+                  <a key={navItem.id} className={[styles.navitem, className].join(" ")} onClick={() => handleNavClick(navItem.id)}>{navItem.name}</a>
+                ))}
               </div>
-              <div className={[styles.socialwrapper,className].join(" ")}>
-                <div style={{display:"flex",flexDirection:"row",gap:"10px"}}>
-                {
-                  socialIcons.map((src)=>
-                  <img
-                    className={[styles.socialicons, className].join(" ")}
-                    loading="lazy"
-                    alt=""
-                    src={src}
-                  />
-                  )
-                }
+              <div className={[styles.socialwrapper, className].join(" ")}>
+                <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+                  {socialIcons.map((icon) => (
+                    <a key={icon.src} href={icon.link} target="_blank" rel="noopener noreferrer">
+                      <img
+                        className={[styles.socialicons, className].join(" ")}
+                        loading="lazy"
+                        alt=""
+                        src={icon.src}
+                      />
+                    </a>
+                  ))}
                 </div>
                 <div className={[styles.buynowwrapper, className].join(" ")}>
-                  <button className={styles.buynowbutton} style={{padding:"5px 15px"}}>
+                  <button className={styles.buynowbutton} style={{ padding: "5px 15px" }}>
                     <div className={styles.navbarbuynow}>Buy Now</div>
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        }
+        )}
         <div className={[styles.titlecontainer, className].join(" ")}>
-          <div className={[styles.title, className].join(" ")}  style={{position:"relative"}}>
+          <div className={[styles.title, className].join(" ")} style={{ position: "relative" }}>
             <div className={[styles.M, className].join(" ")}>
               M
               <img
@@ -135,7 +140,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             </div>
             <div className={[styles.R, className].join(" ")}>
               R
-            <img
+              <img
                 className={[styles.marv_r, className].join(" ")}
                 loading="lazy"
                 alt=""
@@ -166,37 +171,29 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             className={styles.bg}
             loading="lazy"
             alt=""
-            src={layout=="mobile"?"/HomeBgMobile.gif":(layout=="tab"?"/HomeBgIpad.gif":"/HomeBgLaptop.gif")}
+            src={layout === "mobile" ? "/HomeBgMobile.gif" : (layout === "tab" ? "/HomeBgIpad.gif" : "/HomeBgLaptop.gif")}
           />
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-const getLayout=()=>{
-  let layout:"web"|"mobile"|"tab"|"pc"|"laptop"="web";
-  if(window.innerWidth<=500)
-  {
-    layout="mobile"
+const getLayout = () => {
+  let layout: "web"|"mobile"|"tab"|"pc"|"laptop" = "web";
+  if (window.innerWidth <= 500) {
+    layout = "mobile";
   }
-  if(window.innerWidth>500 && window.innerWidth<=1024)
-  {
-    layout="tab"
+  if (window.innerWidth > 500 && window.innerWidth <= 1024) {
+    layout = "tab";
   }
-  if(window.innerWidth>1024 && window.innerWidth<=1920)
-  {
-    layout="laptop"
+  if (window.innerWidth > 1024 && window.innerWidth <= 1920) {
+    layout = "laptop";
   }
-  if(window.innerWidth>1920)
-  {
-    layout="pc"
+  if (window.innerWidth > 1920) {
+    layout = "pc";
   }
-  // if(window.innerWidth>500 && window.innerWidth<=1080)
-  // {
-    
-  // }
-  return layout
+  return layout;
 }
 
-export default Header
+export default Header;
