@@ -35,13 +35,13 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
     <section className={[styles.mainwrapper, className].join(" ")} id="footer" data-scroll-to="footer">
       <div className={[styles.subwrapper, className].join(" ")}>
         <button onClick={()=>onHomeButtonClick()} className={[styles.gotohome, className].join(" ")}>
-          <img
+          <div >Go<br></br> To<br></br> Home</div>
+          <div className={[styles.gotohomeimgwrapper, className].join(" ")}><img
             className={[styles.gotohomeimg, className].join(" ")}
             loading="lazy"
             alt=""
-            src="/marv-face.png"
-          />
-          Go To Home
+            src="/marv-happy.png"
+          /></div>
         </button>
         {/* <div className={[styles.title, className].join(" ")}>Disclaimer</div> */}
         <div className={[styles.line, className].join(" ")}></div>
