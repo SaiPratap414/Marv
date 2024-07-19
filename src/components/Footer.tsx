@@ -44,7 +44,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
           <div className={[styles.description3wrapper, className].join(" ")}>
             <div style={{width:"33%",gap:"3%",display:"flex",flexDirection:"column"}}>
               <div className={[styles.marvtext, className].join(" ")}>MARV</div>
-              <div className={[styles.jointext, className].join(" ")}>Join the Marv at Marv Army</div>
+              <div className={[styles.jointext, className].join(" ")}>Join Marv at Marv Army</div>
               <div style={{ display: "flex", flexDirection: "row", gap: "5%" }}>
   <a href="https://x.com/Realmarv_Sol" target="_blank" rel="noopener noreferrer">
     <img
