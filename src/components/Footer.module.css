@@ -151,6 +151,18 @@
   border-radius: 100px;
 }
 
+.gotohome{
+  position: absolute;
+  font-family: 'Bangers';
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
 @media screen and (max-width:500px) {
   .title{
     font-size: 50px;
@@ -194,6 +206,18 @@
 
   .buymarv{
     font-size: 16px;
+  }
+
+  .gotohome{
+    left: 75%;
+    top: 60%;
+    font-size: 18px;
+  }
+
+  .gotohomeimg{
+    width: 30px;
+    height: auto;
+    object-fit: contain;
   }
 }
 
@@ -250,6 +274,18 @@
     width: 20px;
   }
 
+  .gotohome{
+    left: 80%;
+    top: 50%;
+    font-size: 22px;
+  }
+
+  .gotohomeimg{
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+  }
+
 }
 
 @media screen and (min-width:1025px) {
@@ -303,6 +339,18 @@
     .socialicons{
       height:32px;
       width: 32px;
+    }
+
+    .gotohome{
+      left: 80%;
+      top: 55%;
+      font-size: 24px;
+    }
+
+    .gotohomeimg{
+      width: 75px;
+      height: auto;
+      object-fit: contain;
     }
     
 }

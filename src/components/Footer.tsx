@@ -25,6 +25,15 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
   return (
     <section className={[styles.mainwrapper, className].join(" ")} id="footer" data-scroll-to="footer">
       <div className={[styles.subwrapper, className].join(" ")}>
+        <button onClick={()=>onHomeButtonClick()} className={[styles.gotohome, className].join(" ")}>
+          <img
+            className={[styles.gotohomeimg, className].join(" ")}
+            loading="lazy"
+            alt=""
+            src="/marv-face.png"
+          />
+          Go To Home
+        </button>
         {/* <div className={[styles.title, className].join(" ")}>Disclaimer</div> */}
         <div className={[styles.line, className].join(" ")}></div>
         <div className={[styles.body, className].join(" ")}>
@@ -46,31 +55,31 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
               <div className={[styles.marvtext, className].join(" ")}>MARV</div>
               <div className={[styles.jointext, className].join(" ")}>Join Marv at Marv Army</div>
               <div style={{ display: "flex", flexDirection: "row", gap: "5%" }}>
-  <a href="https://x.com/Realmarv_Sol" target="_blank" rel="noopener noreferrer">
-    <img
-      className={[styles.socialicons, className].join(" ")}
-      loading="lazy"
-      alt="Twitter"
-      src="/twitter.png"
-    />
-  </a>
-  <a href="https://t.me/realmarv_sol" target="_blank" rel="noopener noreferrer">
-    <img
-      className={[styles.socialicons, className].join(" ")}
-      loading="lazy"
-      alt="Telegram"
-      src="/telegram.png"
-    />
-  </a>
-  <a href="#" target="_blank" rel="noopener noreferrer">
-    <img
-      className={[styles.socialicons, className].join(" ")}
-      loading="lazy"
-      alt="Dex"
-      src="/dex.png"
-    />
-  </a>
-</div>
+              <a href="https://x.com/Realmarv_Sol" target="_blank" rel="noopener noreferrer">
+                <img
+                  className={[styles.socialicons, className].join(" ")}
+                  loading="lazy"
+                  alt="Twitter"
+                  src="/twitter.png"
+                />
+              </a>
+              <a href="https://t.me/realmarv_sol" target="_blank" rel="noopener noreferrer">
+                <img
+                  className={[styles.socialicons, className].join(" ")}
+                  loading="lazy"
+                  alt="Telegram"
+                  src="/telegram.png"
+                />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img
+                  className={[styles.socialicons, className].join(" ")}
+                  loading="lazy"
+                  alt="Dex"
+                  src="/dex.png"
+                />
+              </a>
+            </div>
 
             </div>
             {/* <div style={{width:"33%",display:"flex",flexDirection:"column",justifyContent:'start'}}>
